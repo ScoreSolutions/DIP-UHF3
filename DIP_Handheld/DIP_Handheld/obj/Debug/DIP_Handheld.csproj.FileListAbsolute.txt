@@ -1,0 +1,123 @@
+D:\Work_Bizthug\DIP_NEW\DIP_Handheld2\SI_C\obj\Debug\ResolveAssemblyReference.cache
+D:\Work_Bizthug\DIP_NEW\DIP_Handheld2\SI_C\obj\Debug\DIP_Handheld.Properties.Resources.resources
+D:\Work_Bizthug\DIP_NEW\DIP_Handheld2\SI_C\obj\Debug\DIP_Handheld.csproj.GenerateResource.Cache
+D:\Work_Bizthug\DIP_NEW\DIP_Handheld2\SI_C\bin\Debug\DIP_Handheld.exe
+D:\Work_Bizthug\DIP_NEW\DIP_Handheld2\SI_C\bin\Debug\DIP_Handheld.pdb
+D:\Work_Bizthug\DIP_NEW\DIP_Handheld2\SI_C\obj\Debug\DIP_Handheld.frmSetting.resources
+D:\Work_Bizthug\DIP_NEW\DIP_Handheld2\SI_C\obj\Debug\DIP_Handheld.frmCheckOut_Re.resources
+D:\Work_Bizthug\DIP_NEW\DIP_Handheld2\SI_C\obj\Debug\DIP_Handheld.frmCheckIn_Re.resources
+D:\Work_Bizthug\DIP_NEW\DIP_Handheld2\SI_C\obj\Debug\DIP_Handheld.frmChange_Re.resources
+D:\Work_Bizthug\DIP_NEW\DIP_Handheld2\SI_C\obj\Debug\DIP_Handheld.frmChange.resources
+D:\Work_Bizthug\DIP_NEW\DIP_Handheld2\SI_C\obj\Debug\DIP_Handheld.frmTest.resources
+D:\Work_Bizthug\DIP_NEW\DIP_Handheld2\SI_C\obj\Debug\DIP_Handheld.frmCheckIn.resources
+D:\Work_Bizthug\DIP_NEW\DIP_Handheld2\SI_C\obj\Debug\DIP_Handheld.frmCheckOut.resources
+D:\Work_Bizthug\DIP_NEW\DIP_Handheld2\SI_C\obj\Debug\DIP_Handheld.frmConfirm.resources
+D:\Work_Bizthug\DIP_NEW\DIP_Handheld2\SI_C\obj\Debug\DIP_Handheld.frmLocate.resources
+D:\Work_Bizthug\DIP_NEW\DIP_Handheld2\SI_C\obj\Debug\DIP_Handheld.frmLocate2.resources
+D:\Work_Bizthug\DIP_NEW\DIP_Handheld2\SI_C\obj\Debug\DIP_Handheld.frmMain.resources
+D:\Work_Bizthug\DIP_NEW\DIP_Handheld2\SI_C\obj\Debug\DIP_Handheld.exe
+D:\Work_Bizthug\DIP_NEW\DIP_Handheld2\SI_C\obj\Debug\DIP_Handheld.pdb
+D:\MyProject\DIP-UHF3\DIP Handheld\DIP_Handheld\bin\Debug\DIP_Handheld.exe
+D:\MyProject\DIP-UHF3\DIP Handheld\DIP_Handheld\bin\Debug\DIP_Handheld.pdb
+D:\MyProject\DIP-UHF3\DIP Handheld\DIP_Handheld\obj\Debug\ResolveAssemblyReference.cache
+D:\MyProject\DIP-UHF3\DIP Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmSetting.resources
+D:\MyProject\DIP-UHF3\DIP Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmCheckOut_Re.resources
+D:\MyProject\DIP-UHF3\DIP Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmCheckIn_Re.resources
+D:\MyProject\DIP-UHF3\DIP Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmChange_Re.resources
+D:\MyProject\DIP-UHF3\DIP Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmChange.resources
+D:\MyProject\DIP-UHF3\DIP Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmTest.resources
+D:\MyProject\DIP-UHF3\DIP Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmCheckIn.resources
+D:\MyProject\DIP-UHF3\DIP Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmCheckOut.resources
+D:\MyProject\DIP-UHF3\DIP Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmConfirm.resources
+D:\MyProject\DIP-UHF3\DIP Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmLocate.resources
+D:\MyProject\DIP-UHF3\DIP Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmLocate2.resources
+D:\MyProject\DIP-UHF3\DIP Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmMain.resources
+D:\MyProject\DIP-UHF3\DIP Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.Properties.Resources.resources
+D:\MyProject\DIP-UHF3\DIP Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.csproj.GenerateResource.Cache
+D:\MyProject\DIP-UHF3\DIP Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.exe
+D:\MyProject\DIP-UHF3\DIP Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.pdb
+D:\App\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\bin\Debug\DIP_Handheld.exe
+D:\App\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\bin\Debug\DIP_Handheld.pdb
+D:\App\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\ResolveAssemblyReference.cache
+D:\App\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmDeliverConfirm.resources
+D:\App\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmDeliver.resources
+D:\App\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmFloorMoveOut.resources
+D:\App\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmFloorSelectCount.resources
+D:\App\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmFloorSelect.resources
+D:\App\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmFloorUserSelect.resources
+D:\App\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmLocateList.resources
+D:\App\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmSetting.resources
+D:\App\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmCheckOut_Re.resources
+D:\App\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmCheckIn_Re.resources
+D:\App\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmChange_Re.resources
+D:\App\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmChange.resources
+D:\App\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmLocateSearch.resources
+D:\App\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmCheckIn.resources
+D:\App\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmCheckOut.resources
+D:\App\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmConfirm.resources
+D:\App\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmLocate.resources
+D:\App\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmLocate2.resources
+D:\App\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmMain.resources
+D:\App\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.Properties.Resources.resources
+D:\App\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.csproj.GenerateResource.Cache
+D:\App\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.exe
+D:\App\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.pdb
+D:\App\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmCheckOut_List.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\bin\Debug\DIP_Handheld.exe
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\bin\Debug\DIP_Handheld.pdb
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\ResolveAssemblyReference.cache
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmCurrentLocation.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmDeliverDetail.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmCheckOut_List.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmDeliverConfirm.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmDeliver.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmFloorMoveOut.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmFloorSelectCount.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmFloorSelect.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmFloorUserSelect.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmLocateList.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmSetting.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmCheckOut_Re.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmCheckIn_Re.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmChange_Re.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmChange.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmLocateSearch.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmCheckIn.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmCheckOut.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmConfirm.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmLocate.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmLocate2.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.frmMain.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.Properties.Resources.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.csproj.GenerateResource.Cache
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.exe
+D:\MyProject\DIP-UHF3\DIP_Handheld\trunk\DIP_Handheld\obj\Debug\DIP_Handheld.pdb
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\bin\Debug\DIP_Handheld.exe
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\bin\Debug\DIP_Handheld.pdb
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\obj\Debug\ResolveAssemblyReference.cache
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmCurrentLocation.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmDeliverDetail.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmCheckOut_List.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmDeliverConfirm.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmDeliver.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmFloorMoveOut.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmFloorSelectCount.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmFloorSelect.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmFloorUserSelect.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmLocateList.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmSetting.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmCheckOut_Re.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmCheckIn_Re.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmChange_Re.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmChange.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmLocateSearch.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmCheckIn.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmCheckOut.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmConfirm.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmLocate.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmLocate2.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.frmMain.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.Properties.Resources.resources
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.csproj.GenerateResource.Cache
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.exe
+D:\MyProject\DIP-UHF3\DIP_Handheld\DIP_Handheld\obj\Debug\DIP_Handheld.pdb

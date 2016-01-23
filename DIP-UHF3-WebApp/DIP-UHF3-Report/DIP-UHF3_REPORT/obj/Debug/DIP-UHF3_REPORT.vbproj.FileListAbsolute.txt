@@ -1,0 +1,17 @@
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DIP-UHF3_REPORT\obj\Debug\DIP-UHF3_REPORT.vbprojResolveAssemblyReference.cache
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DIP-UHF3_REPORT\obj\Debug\DIP_UHF3_REPORT.Resources.resources
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DIP-UHF3_REPORT\obj\Debug\DIP-UHF3_REPORT.vbproj.GenerateResource.Cache
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DIP-UHF3_REPORT\bin\DIP-UHF3_REPORT.dll.config
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DIP-UHF3_REPORT\bin\DIP-UHF3_REPORT.dll
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DIP-UHF3_REPORT\bin\DIP-UHF3_REPORT.pdb
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DIP-UHF3_REPORT\bin\DIP-UHF3_REPORT.xml
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DIP-UHF3_REPORT\bin\DAL.dll
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DIP-UHF3_REPORT\bin\Data.dll
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DIP-UHF3_REPORT\bin\RfidApiLib.dll
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DIP-UHF3_REPORT\bin\DAL.pdb
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DIP-UHF3_REPORT\bin\DAL.xml
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DIP-UHF3_REPORT\bin\Data.pdb
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DIP-UHF3_REPORT\bin\Data.xml
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DIP-UHF3_REPORT\obj\Debug\DIP-UHF3_REPORT.dll
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DIP-UHF3_REPORT\obj\Debug\DIP-UHF3_REPORT.xml
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DIP-UHF3_REPORT\obj\Debug\DIP-UHF3_REPORT.pdb

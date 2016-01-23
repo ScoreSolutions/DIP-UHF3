@@ -1,0 +1,8 @@
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\Data\bin\Debug\Data.dll
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\Data\bin\Debug\Data.pdb
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\Data\bin\Debug\Data.xml
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\Data\obj\Debug\DIP_RFID.Data.Resources.resources
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\Data\obj\Debug\Data.vbproj.GenerateResource.Cache
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\Data\obj\Debug\Data.dll
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\Data\obj\Debug\Data.xml
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\Data\obj\Debug\Data.pdb

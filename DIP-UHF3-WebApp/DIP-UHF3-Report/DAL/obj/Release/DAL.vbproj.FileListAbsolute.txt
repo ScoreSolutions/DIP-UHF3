@@ -1,0 +1,13 @@
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DAL\bin\Release\DAL.dll
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DAL\bin\Release\DAL.pdb
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DAL\bin\Release\DAL.xml
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DAL\bin\Release\Data.dll
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DAL\bin\Release\RfidApiLib.dll
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DAL\bin\Release\Data.pdb
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DAL\bin\Release\Data.xml
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DAL\obj\Release\DAL.vbprojResolveAssemblyReference.cache
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DAL\obj\Release\DIP_RFID.DAL.Resources.resources
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DAL\obj\Release\DAL.vbproj.GenerateResource.Cache
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DAL\obj\Release\DAL.dll
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DAL\obj\Release\DAL.xml
+D:\MyProject\DIP-UHF3\DIP-UHF3-WebApp\trunk\DIP-UHF3-Report\DAL\obj\Release\DAL.pdb

@@ -1,0 +1,116 @@
+﻿Namespace ConnectDB
+    Public Class Constant
+        Public Const CultureSessionID = "Culture"
+        Public Const ApplicationErrorSessionID = "ErrorMessage"
+        Public Const IntFormat = "#,##0"
+        Public Const DoubleFormat = "#,##0.00"
+        Public Const DateFormat = "dd/MM/yyyy"
+        Public Const UserProfileSession As String = "UserProfile"
+        Public Const UserMenuListSession As String = "MenuList"
+        Public Const ForceChangePasswordSession As String = "ForceChangePassword"
+        Public Const UserJoinCaseSession As String = "UserJoinCaseSession"
+        Public Const UserMenuSession As String = "UserMenuSession"
+
+        Public Shared ReadOnly Property HomeFolder() As String
+            Get
+                Return System.Web.HttpContext.Current.Request.ApplicationPath & "/"
+            End Get
+        End Property
+        Public ReadOnly Property ImageFolder() As String
+            Get
+                Return HomeFolder & "Images/"
+            End Get
+        End Property
+        Partial Public Class CultureName
+            Public Const Defaults As String = "th-TH"
+            Public Const Eng As String = "en-US"
+            Public Const Thai As String = "th-TH"
+        End Class
+
+
+        Partial Public Class MTaskTemplate
+            Partial Public Class Frequency
+                Public Const Daily As String = "D"
+                Public Const Weekly As String = "W"
+                Public Const Monthly As String = "M"
+            End Class
+            
+        End Class
+        Partial Public Class TsTaskList
+            Partial Public Class MStatusID
+                Public Const Waiting As Integer = 1
+                Public Const AssignMHE As Integer = 2
+                Public Const AssignResource As Integer = 3
+                Public Const StatusStart As Integer = 4
+                Public Const StatusEnd As Integer = 5
+                Public Const StatusCancel As Integer = 6
+                Public Const ManualAssignMHE As Integer = 7
+                Public Const FinishJob As Integer = 8
+            End Class
+        End Class
+
+        Public Shared Function GetMonthNameTH(MonthNo As Integer) As String
+            Dim month As String = ""
+            Select Case MonthNo
+                Case 1
+                    month = "มกราคม"
+                Case 2
+                    month = "กุมภาพันธ์"
+                Case 3
+                    month = "มีนาคม"
+                Case 4
+                    month = "เมษายน"
+                Case 5
+                    month = "พฤษภาคม"
+                Case 6
+                    month = "มิถุนายน"
+                Case 7
+                    month = "กรกฎาคม"
+                Case 8
+                    month = "สิงหาคม"
+                Case 9
+                    month = "กันยายน"
+                Case 10
+                    month = "ตุลาคม"
+                Case 11
+                    month = "พฤศจิกายน"
+                Case 12
+                    month = "ธันวาคม"
+            End Select
+            Return month
+        End Function
+
+        Public Shared Function GetMonthNameEN(MonthNo As Integer) As String
+            Dim month As String = ""
+            Select Case MonthNo
+                Case 1
+                    month = "January"
+                Case 2
+                    month = "Febuary"
+                Case 3
+                    month = "March"
+                Case 4
+                    month = "April"
+                Case 5
+                    month = "May"
+                Case 6
+                    month = "June"
+                Case 7
+                    month = "July"
+                Case 8
+                    month = "August"
+                Case 9
+                    month = "September"
+                Case 10
+                    month = "October"
+                Case 11
+                    month = "November"
+                Case 12
+                    month = "December"
+            End Select
+            Return month
+        End Function
+    End Class
+
+End Namespace
+

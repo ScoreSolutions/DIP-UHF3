@@ -1,0 +1,8 @@
+D:\MyProject\DIP-UHF3\FaultManagement\LinqDB\bin\Debug\LinqDB.dll
+D:\MyProject\DIP-UHF3\FaultManagement\LinqDB\bin\Debug\LinqDB.pdb
+D:\MyProject\DIP-UHF3\FaultManagement\LinqDB\bin\Debug\LinqDB.xml
+D:\MyProject\DIP-UHF3\FaultManagement\LinqDB\obj\Debug\LinqDB.Resources.resources
+D:\MyProject\DIP-UHF3\FaultManagement\LinqDB\obj\Debug\LinqDB.vbproj.GenerateResource.Cache
+D:\MyProject\DIP-UHF3\FaultManagement\LinqDB\obj\Debug\LinqDB.dll
+D:\MyProject\DIP-UHF3\FaultManagement\LinqDB\obj\Debug\LinqDB.xml
+D:\MyProject\DIP-UHF3\FaultManagement\LinqDB\obj\Debug\LinqDB.pdb

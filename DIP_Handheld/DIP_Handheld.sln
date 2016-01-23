@@ -1,0 +1,31 @@
+
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIP_Handheld", "DIP_Handheld\DIP_Handheld.csproj", "{B712DCBB-588D-48AD-8DBE-E912367904A8}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Cab1", "Cab1\Cab1.vdproj", "{A3070C9A-DC96-452C-9CA0-3E7ACA146A8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B712DCBB-588D-48AD-8DBE-E912367904A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B712DCBB-588D-48AD-8DBE-E912367904A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B712DCBB-588D-48AD-8DBE-E912367904A8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B712DCBB-588D-48AD-8DBE-E912367904A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B712DCBB-588D-48AD-8DBE-E912367904A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B712DCBB-588D-48AD-8DBE-E912367904A8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A3070C9A-DC96-452C-9CA0-3E7ACA146A8F}.Debug|Any CPU.ActiveCfg = Debug
+		{A3070C9A-DC96-452C-9CA0-3E7ACA146A8F}.Debug|Any CPU.Build.0 = Debug
+		{A3070C9A-DC96-452C-9CA0-3E7ACA146A8F}.Release|Any CPU.ActiveCfg = Release
+		{A3070C9A-DC96-452C-9CA0-3E7ACA146A8F}.Release|Any CPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal

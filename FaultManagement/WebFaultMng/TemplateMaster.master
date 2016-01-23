@@ -1,0 +1,200 @@
+﻿<%@ Master Language="VB" CodeFile="TemplateMaster.master.vb" Inherits="TemplateMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script>
+        function Confirm2() {
+            var confirm_value = document.createElement("INPUT");
+            confirm_value.type = "hidden";
+            confirm_value.name = "confirm_value";
+            if (confirm("Are you really like to Log out?")) {
+                confirm_value.value = "Yes";
+            } else {
+                confirm_value.value = "No";
+            }
+            document.forms[0].appendChild(confirm_value);
+        }
+
+    </script>
+          <style type="text/css">
+      .pageheader
+       {
+          width:2500px;
+          height:110px;
+          background-color:MediumTurquoise;
+          background-color:  #36b0b6;
+          position:fixed;
+          top:0;
+          /*right:0;*/
+          left:0;
+          /*margin-left:auto;
+          margin-right:auto;*/
+          z-index:99;
+          clear:both;
+          /*background: linear-gradient(to bottom, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);*/ 
+       }
+     
+
+           .center{
+             
+              width:1024px;
+              height:1024px;
+              margin-left:auto;
+              margin-right:auto;
+              background-color:#E3F3F9;
+              
+           }
+        .body{
+            background-color:#CCFFFF;
+        }
+ 
+ul.flipboard{
+margin:0;
+padding:0;
+list-style:none;
+-webkit-perspective: 10000px; /* larger the value, the less pronounced the 3D effect */
+-moz-perspective: 10000px;
+-o-perspective: 10000px;
+perspective: 10000px;
+}
+
+ul.flipboard li{
+display: inline-block;
+width: 80px; /* dimensions of buttons. Do not add padding/margins inside this rule */
+height: 80px;
+margin-right: 10px; /* spacing between buttons */
+background: #36b0b6;
+font: bold 36px Arial; /* font size */
+text-transform: uppercase;
+text-align: center;
+cursor: pointer;
+}
+
+ul.flipboard li a{
+display:block;
+width: 100%;
+height: 100%;
+color: black;
+text-decoration: none;
+outline: none;
+-webkit-transition:all 300ms ease-out 0.1s; /* CSS3 transition. Last value is pause before transition play */
+-moz-transition:all 300ms ease-out 0.1s;
+-o-transition:all 300ms ease-out 0.1s;
+transition:all 300ms ease-out 0.1s;
+}
+
+ul.flipboard li a span{
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+padding-top: 15px; /* Add top padding to "center" content */
+display:block;
+width: 100%;
+height: 100%;
+-webkit-transition:all 300ms ease-out 0.1s; /* CSS3 transition. Last value is pause before transition play */
+-moz-transition:all 300ms ease-out 0.1s;
+-o-transition:all 300ms ease-out 0.1s;
+transition:all 300ms ease-out 0.1s;
+}
+
+ul.flipboard li a ImageButton{
+border-width: 0;
+}
+
+ul.flipboard li:hover a{
+-moz-transform: rotateY(180deg); /* flip horizontally 180deg*/
+-webkit-transform: rotateY(180deg);
+transform: rotateY(180deg);
+background: #cef1ff; /* background color of button onmouseover */
+-webkit-border-radius:7px;
+-moz-border-radius:7px;
+border-radius:7px;
+-webkit-box-shadow:0 0 5px #eee inset;
+-moz-box-shadow:0 0 5px #eee inset;
+box-shadow:0 0 5px #eee inset;
+}
+
+ul.flipboard li:hover a span{
+-moz-transform: rotateY(180deg); /* flip horizontally 180deg*/
+-webkit-transform: rotateY(180deg);
+transform: rotateY(180deg);
+}
+
+</style>
+    <script type="text/javascript" src="Script/JScript.js"></script>
+</head>
+<body class="body">
+    <form id="form1" runat="server">
+         <table style="width: 100%">
+            <tr class="pageheader">
+                <td>
+                    <table>
+                        <tr>
+                <td width="100px"></td>
+                <td width="224px" style="text-align: right">
+                    <asp:Image ID="Image1" runat="server" Height="95px" ImageUrl="~/Images/logo.png" />
+                </td>
+                <td width="60px"></td>
+                <td style="vertical-align:bottom;">
+                   <ul class="flipboard">
+                        <li><a><span><asp:ImageButton ID="btnOverview" runat="server" ImageUrl="~/Images/icon_enOverview.png" Enabled="False" ToolTip="Overview" /><%--<img src="images/icon_Overview.png" title="Overview" />--%></span></a></li>
+                        <li><a><span><asp:ImageButton ID="btnSetting" runat="server" ImageUrl="~/Images/icon_enSetting.png" Enabled="False" ToolTip="Setting" /><%--<img src="images/icon_Setting.png" title="Setting" />--%></span></a></li>
+                        
+                        <li><a><span><asp:ImageButton ID="btnAlarm" runat="server" ImageUrl="~/Images/icon_enAlarm.png" Enabled="False" ToolTip="Alarm" /><%--<img src="images/icon_Alarm.png" title="Alarm" />--%></span></a></li>
+                        <li><a><span><asp:ImageButton ID="btnHistory" runat="server" ImageUrl="~/Images/icon_enHistory.png" Enabled="False" ToolTip="History" /><%--<img src="images/icon_History.png" title="History" />--%></span></a></li>
+                       <%-- <li><a href="frmReport.aspx"><span><img src="images/icon_Report.png" title="Report" /></span></a></li>--%>
+                        <li><a><span><asp:ImageButton ID="btnAdmin" runat="server" ImageUrl="~/Images/icon_enAdmin.png" Enabled="False" ToolTip="Admin" /><%--<img src="images/icon_Admin.png" title="Admin" />--%></span></a></li>
+                        <li><a><span><asp:ImageButton ID="btnRegister" runat="server" ImageUrl="~/Images/icon_enRegister.png" Enabled="False" ToolTip="Register" /></span></a></li>
+                    </ul>
+                </td>
+                            <td width="290px" style="text-align: right; vertical-align: top">
+                                
+                                    <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Names="Quark" Font-Size="12pt"></asp:Label>
+                                     &nbsp;&nbsp;
+                                     <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Images/icon_Logout.png" Height="20px" Width="20px" OnClientClick="Confirm2()" OnClick ="ImageButton1_Click" />
+                                   
+                                
+                           <%--<asp:Button ID="Button1" runat="server" Text="Button" />--%>
+                               
+                            </td>
+                            </tr>
+                    </table>
+                </td>
+            </tr>
+             <%--Header--%>
+
+
+              <%--Center--%>
+
+               <tr style="height:120px">
+                <td >
+                    </td>
+              </tr>
+
+           
+            
+            <tr>
+                <td >
+                    <table class ="center" style="background-color: #AFEEEE;border-radius:15px;border:solid;border-color:MediumTurquoise">
+                        <tr>
+                            <td style="vertical-align:top;">
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+             </td>
+                        </tr>
+                    </table>
+                </td>
+                
+            </tr>
+        </table>
+     
+    </form>
+</body>
+</html>

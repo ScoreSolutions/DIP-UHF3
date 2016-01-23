@@ -1,0 +1,44 @@
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C\SI_C\bin\Debug\SI_C.exe
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C\SI_C\bin\Debug\SI_C.pdb
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C\SI_C\bin\Debug\NBarcodeApi.dll
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C\SI_C\bin\Debug\NBluetoothApi.dll
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C\SI_C\bin\Debug\NCameraApi.dll
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C\SI_C\bin\Debug\NFingerPrintApi.dll
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C\SI_C\bin\Debug\NGpsApi.dll
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C\SI_C\bin\Debug\NModemApi.dll
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C\SI_C\bin\Debug\NMsrApi.dll
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C\SI_C\bin\Debug\NPrinterApi.dll
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C\SI_C\bin\Debug\NRF1356Api.dll
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C\SI_C\bin\Debug\NRfidApi.dll
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C\SI_C\bin\Debug\NSmartCardApi.dll
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C\SI_C\bin\Debug\NSysSvcApi.dll
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C\SI_C\obj\Debug\ResolveAssemblyReference.cache
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C\SI_C\obj\Debug\SI_C.frmCheckIn.resources
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C\SI_C\obj\Debug\SI_C.frmLocate.resources
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C\SI_C\obj\Debug\SI_C.Properties.Resources.resources
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C\SI_C\obj\Debug\SI_C.csproj.GenerateResource.Cache
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C\SI_C\obj\Debug\SI_C.exe
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C\SI_C\obj\Debug\SI_C.pdb
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C\SI_C\obj\Debug\SI_C.frmCheckOut.resources
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C\SI_C\obj\Debug\SI_C.frmConfirm.resources
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C\SI_C\obj\Debug\SI_C.frmMain.resources
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C\SI_C\obj\Debug\SI_C.frmTest.resources
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C - Copy (2)\SI_C\obj\Debug\ResolveAssemblyReference.cache
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C - Copy (2)\SI_C\obj\Debug\SI_C.frmChange_Re.resources
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C - Copy (2)\SI_C\obj\Debug\SI_C.frmChange.resources
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C - Copy (2)\SI_C\obj\Debug\SI_C.frmTest.resources
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C - Copy (2)\SI_C\obj\Debug\SI_C.frmCheckIn.resources
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C - Copy (2)\SI_C\obj\Debug\SI_C.frmCheckOut.resources
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C - Copy (2)\SI_C\obj\Debug\SI_C.frmConfirm.resources
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C - Copy (2)\SI_C\obj\Debug\SI_C.frmLocate.resources
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C - Copy (2)\SI_C\obj\Debug\SI_C.frmLocate2.resources
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C - Copy (2)\SI_C\obj\Debug\SI_C.frmMain.resources
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C - Copy (2)\SI_C\obj\Debug\SI_C.Properties.Resources.resources
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C - Copy (2)\SI_C\obj\Debug\SI_C.csproj.GenerateResource.Cache
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C - Copy (2)\SI_C\obj\Debug\SI_C.exe
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C - Copy (2)\SI_C\bin\Debug\SI_C.exe
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C - Copy (2)\SI_C\bin\Debug\SI_C.pdb
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C - Copy (2)\SI_C\obj\Debug\SI_C.pdb
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C - Copy (2)\SI_C\obj\Debug\SI_C.frmCheckIn_Re.resources
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C - Copy (2)\SI_C\obj\Debug\SI_C.frmCheckOut_Re.resources
+D:\Work_Bizthug\SIA\SI_Handheld\SI_C - Copy (2)\SI_C\obj\Debug\SI_C.frmSetting.resources

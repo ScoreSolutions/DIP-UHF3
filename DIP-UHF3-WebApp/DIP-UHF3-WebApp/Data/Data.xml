@@ -1,0 +1,7 @@
+<graph caption='xxxxx' xAxisName='User' yAxisName='Number of day' decimalPrecision='0' formatNumberScale='0' rotateNames='1'>
+<set name='Akkarawat' value='50' color='AFD8F8' />
+<set name='Jatupol' value='64' color='F6BD0F' />
+<set name='Sirapong' value='72' color='8BBA00' />
+<set name='Teerawut' value='20' color='FF8E46' />
+<set name='Nongnuch' value='35' color='008E8E' />
+</graph>

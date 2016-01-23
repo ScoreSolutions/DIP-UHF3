@@ -1,0 +1,1 @@
+﻿Sound=True|RSSI=60

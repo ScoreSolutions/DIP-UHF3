@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8830F18D-75AA-41AE-AF7A-5FFAE77EFB79}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LinqDB</RootNamespace>
+    <AssemblyName>LinqDB</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>LinqDB.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>LinqDB.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectDB\Constant.vb" />
+    <Compile Include="ConnectDB\FaultMngSqlDB.vb" />
+    <Compile Include="ConnectDB\PatentSqlDB.vb" />
+    <Compile Include="ConnectDB\IniReader.vb" />
+    <Compile Include="ConnectDB\LoginSession.vb" />
+    <Compile Include="ConnectDB\MessageResources.vb" />
+    <Compile Include="ConnectDB\DIPRFIDSqlDB.vb" />
+    <Compile Include="ConnectDB\QDIPAECDB.vb" />
+    <Compile Include="ConnectDB\SqlDB.vb" />
+    <Compile Include="ConnectDB\TransactionDB.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="TABLE\CfChangeLocationLinqDB.vb" />
+    <Compile Include="TABLE\CfSpeedwayAntLinqDB.vb" />
+    <Compile Include="TABLE\CfSpeedwayGpiLinqDB.vb" />
+    <Compile Include="TABLE\CfSpeedwayLinqDB.vb" />
+    <Compile Include="TABLE\CfSpeedwayLowDutyCycleLinqDB.vb" />
+    <Compile Include="TABLE\CfSpeedwayReportLinqDB.vb" />
+    <Compile Include="TABLE\CfSpeedwaySettingFilterLinqDB.vb" />
+    <Compile Include="TABLE\CfSpeedwaySettingLinqDB.vb" />
+    <Compile Include="TABLE\CfSysconfigLinqDB.vb" />
+    <Compile Include="TABLE\MsBuildingLinqDB.vb" />
+    <Compile Include="TABLE\MsDesktopGridLinqDB.vb" />
+    <Compile Include="TABLE\MsDesktopLinqDB.vb" />
+    <Compile Include="TABLE\MsFloorLinqDB.vb" />
+    <Compile Include="TABLE\MsFloorPlanLinqDB.vb" />
+    <Compile Include="TABLE\MsGridLayoutLinqDB.vb" />
+    <Compile Include="TABLE\MsHumidityTempDeviceLinqDB.vb" />
+    <Compile Include="TABLE\MsLedTvLinqDB.vb" />
+    <Compile Include="TABLE\MsMidRangeReaderLinqDB.vb" />
+    <Compile Include="TABLE\MsParticleCounterDeviceLinqDB.vb" />
+    <Compile Include="TABLE\MsRoomLinqDB.vb" />
+    <Compile Include="TABLE\MsScreenLinqDB.vb" />
+    <Compile Include="TABLE\MsSignageContentSchDataLinqDB.vb" />
+    <Compile Include="TABLE\MsSignageContentTemplateLinqDB.vb" />
+    <Compile Include="TABLE\MsSignageScheduleDailyLinqDB.vb" />
+    <Compile Include="TABLE\MsSignageScheduleMonthlyLinqDB.vb" />
+    <Compile Include="TABLE\MsSignageScheduleTimeLinqDB.vb" />
+    <Compile Include="TABLE\MsSignageScheduleWeeklyLinqDB.vb" />
+    <Compile Include="TABLE\MsSignageTemplateScheduleLinqDB.vb" />
+    <Compile Include="TABLE\MsSpeedwayAntGridLinqDB.vb" />
+    <Compile Include="TABLE\MsSpeedwayAntLinqDB.vb" />
+    <Compile Include="TABLE\MsSpeedwayGpiLinqDB.vb" />
+    <Compile Include="TABLE\MsSpeedwayLinqDB.vb" />
+    <Compile Include="TABLE\MsSpeedwayLowDutyCycleLinqDB.vb" />
+    <Compile Include="TABLE\MsSpeedwayObjectiveLinqDB.vb" />
+    <Compile Include="TABLE\MsSpeedwayReportLinqDB.vb" />
+    <Compile Include="TABLE\MsSpeedwaySettingFilterLinqDB.vb" />
+    <Compile Include="TABLE\MsSpeedwaySettingLinqDB.vb" />
+    <Compile Include="TABLE\MsSubmoduleLinqDB.vb" />
+    <Compile Include="TABLE\MsTextScrollingSchDailyLinqDB.vb" />
+    <Compile Include="TABLE\MsTextScrollingSchDataLinqDB.vb" />
+    <Compile Include="TABLE\MsTextScrollingScheduleLinqDB.vb" />
+    <Compile Include="TABLE\MsTextScrollingSchMonthlyLinqDB.vb" />
+    <Compile Include="TABLE\MsTextScrollingSchTimeLinqDB.vb" />
+    <Compile Include="TABLE\MsTextScrollingSchWeeklyLinqDB.vb" />
+    <Compile Include="TABLE\MsWebModuleLinqDB.vb" />
+    <Compile Include="TABLE\TbAlarmLogLinqDB.vb" />
+    <Compile Include="TABLE\TbClassgroupLinqDB.vb" />
+    <Compile Include="TABLE\TbDepartmentLinqDB.vb" />
+    <Compile Include="TABLE\TbFileborrowitemLinqDB.vb" />
+    <Compile Include="TABLE\TbFileborrowLinqDB.vb" />
+    <Compile Include="TABLE\TbFilelocationLinqDB.vb" />
+    <Compile Include="TABLE\TbFilestoreLinqDB.vb" />
+    <Compile Include="TABLE\TbFindHhtLinqDB.vb" />
+    <Compile Include="TABLE\TbFingerscanLinqDB.vb" />
+    <Compile Include="TABLE\TbGateConsoleLogLinqDB.vb" />
+    <Compile Include="TABLE\TbLogLocationLinqDB.vb" />
+    <Compile Include="TABLE\TbMenuLinqDB.vb" />
+    <Compile Include="TABLE\TbModuleLinqDB.vb" />
+    <Compile Include="TABLE\TbOfficerLinqDB.vb" />
+    <Compile Include="TABLE\TbOfficerMenuLinqDB.vb" />
+    <Compile Include="TABLE\TbPatentLinqDB.vb" />
+    <Compile Include="TABLE\TbPatentTypeLinqDB.vb" />
+    <Compile Include="TABLE\TbPermissionLinqDB.vb" />
+    <Compile Include="TABLE\TbPermissionMenuLinqDB.vb" />
+    <Compile Include="TABLE\TbPermissionOfficerLinqDB.vb" />
+    <Compile Include="TABLE\TbPositionLinqDB.vb" />
+    <Compile Include="TABLE\TbRequistionLinqDB.vb" />
+    <Compile Include="TABLE\TbReserveHistoryLinqDB.vb" />
+    <Compile Include="TABLE\TbReserveJobLinqDB.vb" />
+    <Compile Include="TABLE\TbReserveLinqDB.vb" />
+    <Compile Include="TABLE\TbSetalarmLinqDB.vb" />
+    <Compile Include="TABLE\TbSetmoduleLinqDB.vb" />
+    <Compile Include="TABLE\TbSetupLinqDB.vb" />
+    <Compile Include="TABLE\TbShutdowsLinqDB.vb" />
+    <Compile Include="TABLE\TbShutdowsMenuLinqDB.vb" />
+    <Compile Include="TABLE\TbStatusLinqDB.vb" />
+    <Compile Include="TABLE\TbSubmoduleLinqDB.vb" />
+    <Compile Include="TABLE\TbTitleLinqDB.vb" />
+    <Compile Include="TABLE\TmpDocTracingLinqDB.vb" />
+    <Compile Include="TABLE\TmpDocTrackingLedTvLinqDB.vb" />
+    <Compile Include="TABLE\TmpFileborrowitemLinqDB.vb" />
+    <Compile Include="TABLE\TmpGateReaderTagLinqDB.vb" />
+    <Compile Include="TABLE\TsFileCurrentGridLinqDB.vb" />
+    <Compile Include="TABLE\TsFileCurrentLocationLinqDB.vb" />
+    <Compile Include="TABLE\TsFileLostLinqDB.vb" />
+    <Compile Include="TABLE\TsFileMoveHistoryLinqDB.vb" />
+    <Compile Include="TABLE\TsFileOperationTimelineLinqDB.vb" />
+    <Compile Include="TABLE\TsHumidityTempDataLinqDB.vb" />
+    <Compile Include="TABLE\TsHumidityTempHistoryLinqDB.vb" />
+    <Compile Include="TABLE\TsLogErrorActivityLinqDB.vb" />
+    <Compile Include="TABLE\TsLoginHistoryLinqDB.vb" />
+    <Compile Include="TABLE\TsLogTransLinqDB.vb" />
+    <Compile Include="TABLE\TsLogUserActivityLinqDB.vb" />
+    <Compile Include="TABLE\TsParticleCounterDataLinqDB.vb" />
+    <Compile Include="TABLE\TsParticleCounterHistoryLinqDB.vb" />
+    <Compile Include="TABLE\TsRequisitionTagLinqDB.vb" />
+    <Compile Include="TABLE\TsSendMailAlertDuedateLinqDB.vb" />
+    <Compile Include="TABLE\TsSignageFileGrowthMonthLinqDB.vb" />
+    <Compile Include="TABLE\TsSignageFileGrowthYearLinqDB.vb" />
+    <Compile Include="TABLE\TsTempImportTextfileLinqDB.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DIALCHART type="speedometer" name="TestChart">
+<DIMENSION width='400' height='400' />
+<COLORS background='#000080' />
+<STYLE_TITLE font="ARIAL" size="10" color="#ff0000" orientation="HORIZONTAL" />
+<STYLE_TICK_LABELS font="ARIAL" size="10" color="#ff0000" />
+<STYLE_SUBTITLE font="ARIAL" size="10" color="#ff0000" orientation="HORIZONTAL" name="Speedometer Chart" />
+<STYLE_LABELS_DEFAULT font="ARIAL" size="10" color="#ff0000" orientation="VERTICAL" />
+<CONF>
+<PARAMETER name="upper" value="100.0" />
+<PARAMETER name="lower" value="0.0" />
+<PARAMETER name="legend" value="true" />
+<PARAMETER name="increment" value="10.0" />
+<PARAMETER name="orientation" value="vertical" />
+<PARAMETER name="minor_tick" value="1" />
+<PARAMETER name="dialtextuse" value="false" />
+</CONF>
+<INTERVALS>
+<INTERVAL label="" min="0.0" max="0.0" color="#ffffff"  />
+<INTERVAL label="Low" min="0.0" max="25.0" color="#ff0000"  />
+<INTERVAL label="Midium" min="25.0" max="60.0" color="#ffff00"  />
+</INTERVALS>
+</DIALCHART>

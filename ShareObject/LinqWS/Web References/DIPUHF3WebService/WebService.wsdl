@@ -1,0 +1,4472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CheckAuthorizeGroupScreenByUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="screenid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckAuthorizeGroupScreenByUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckAuthorizeGroupScreenByUserResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAuthorizeGroupMap">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="groupid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAuthorizeGroupMapResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAuthorizeGroupMapResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadUserByDepartment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="department_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadUserByDepartmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadUserByDepartmentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadUserDeaprtByName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="department_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadUserDeaprtByNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadUserDeaprtByNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadMapGridDesktopAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadMapGridDesktopAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadMapGridDesktopAllResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetImageFloorPlan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetImageFloorPlanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetImageFloorPlanResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadFloorPlanByFloorAndRoom">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ms_floor_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ms_room_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadFloorPlanByFloorAndRoomResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadFloorPlanByFloorAndRoomResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadGridLayoutActive">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadGridLayoutActiveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadGridLayoutActiveResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoomDetailById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoomDetailByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRoomDetailByIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveCurrentInRoom">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="floorcurrentId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gridcurrentId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveCurrentInRoomResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveCurrentInRoomResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadOfficerRoomByRoomId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="roomid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadOfficerRoomByRoomIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadOfficerRoomByRoomIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadFloorPlanByRoomId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="roomid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gridlayoutcurrentid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="desktopid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadFloorPlanByRoomIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadFloorPlanByRoomIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadOfficerMapLayoutByLayoutId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gridlayoutid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadOfficerMapLayoutByLayoutIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadOfficerMapLayoutByLayoutIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveMapGrid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ms_desktop_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ms_grid_layout_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="grid_col" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="grid_row" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveMapGridResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveMapGridResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSpeedWayReadAreaAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadSpeedWayReadAreaAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadSpeedWayReadAreaAllResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSpeedWayByRoomId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="roomid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSpeedWayByRoomIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadSpeedWayByRoomIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAntennaBySpeedway">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="speedwayid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAntennaBySpeedwayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAntennaBySpeedwayResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAttenaMapLayoutByPort">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ms_speedway_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAttenaMapLayoutByPortResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAttenaMapLayoutByPortResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAntennaPlanByRoomId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="roomid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gridlayoutcurrentid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="speedwayantid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAntennaPlanByRoomIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAntennaPlanByRoomIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveMapAntenna">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ms_speedway_ant_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ms_grid_layout_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="grid_col" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="grid_row" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveMapAntennaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveMapAntennaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSysConfig">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadSysConfigResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadSysConfigResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveSysconfig">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ConfigName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ConfigValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveSysconfigResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveSysconfigResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadDesktopAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadDesktopAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadDesktopAllResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDesktopById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDesktopByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDesktopByIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveDesktop">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="desk_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ms_room_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tb_officer_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="active" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="login_username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveDesktopResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveDesktopResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDesktop">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDesktopResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteDesktopResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadDepartment">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadDepartmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadDepartmentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadDepartmentByUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadDepartmentByUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadDepartmentByUserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSinageScheduleAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadSinageScheduleAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadSinageScheduleAllResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSinageScheduleID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSinageScheduleIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadSinageScheduleIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadMonthByDigitalSinageTemplateSchedule">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ms_signage_template_schedule_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadMonthByDigitalSinageTemplateScheduleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadMonthByDigitalSinageTemplateScheduleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadDayByDigitalSinageTemplateSchedule">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ms_signage_template_schedule_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadDayByDigitalSinageTemplateScheduleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadDayByDigitalSinageTemplateScheduleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSinageScheduleDailyByTemplateID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ms_signage_template_schedule_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSinageScheduleDailyByTemplateIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadSinageScheduleDailyByTemplateIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSinageScheduleWeeklyByTemplateID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ms_signage_template_schedule_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSinageScheduleWeeklyByTemplateIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadSinageScheduleWeeklyByTemplateIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSinageScheduleTimeByTemplateID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ms_signage_template_schedule_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSinageScheduleTimeByTemplateIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadSinageScheduleTimeByTemplateIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveSinageSchedule">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="schedule_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ms_signage_content_template_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ms_led_tv_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="start_date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="end_date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="start_time" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="end_time" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="active_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="daily" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="weekly" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="monthly" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="recur_every_days" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="recur_every_week" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sch_sun" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sch_mon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sch_tue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sch_wed" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sch_thu" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sch_fri" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sch_sat" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="month_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonobject_time" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="login_username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveSinageScheduleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveSinageScheduleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSinageSchedule">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSinageScheduleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteSinageScheduleResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadFloorAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadFloorAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadFloorAllResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadFloorByFloorPlan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="floor_plan_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadFloorByFloorPlanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadFloorByFloorPlanResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadFloorByDesktop">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="desktop_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadFloorByDesktopResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadFloorByDesktopResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadFloorBySpeedway">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="speedway_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadFloorBySpeedwayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadFloorBySpeedwayResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadFloorByLEDTV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ledtv_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadFloorByLEDTVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadFloorByLEDTVResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadFloorPlanAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadFloorPlanAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadFloorPlanAllResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFloorPlanById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFloorPlanByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFloorPlanByIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveFloorPlan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="floor_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="room_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="login_username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="active" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strimagebase64" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strimagename" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="floor_plan_name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveFloorPlanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveFloorPlanResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFloorPlan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFloorPlanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteFloorPlanResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadGridLayoutAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadGridLayoutAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadGridLayoutAllResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGridLayoutById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGridLayoutByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGridLayoutByIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveGridLayout">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="layout_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vertical_line" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="horizontal_line" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="active" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="login_username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveGridLayoutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveGridLayoutResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteGridLayout">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteGridLayoutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteGridLayoutResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadLEDTVAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadLEDTVAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadLEDTVAllResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadLEDTVID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadLEDTVIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadLEDTVIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveLEDTV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tv_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="install_position" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ms_floor_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip_address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ms_signage_template_id_default" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="default_text_scrolling" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="text_scrolling_speed" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="active" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="login_username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveLEDTVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveLEDTVResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteLEDTV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteLEDTVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteLEDTVResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadLEDTVBySinageSchedule">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ms_signage_template_schedule_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadLEDTVBySinageScheduleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadLEDTVBySinageScheduleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadLEDTVIDBySinageContent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ms_signage_template_id_default" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadLEDTVIDBySinageContentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadLEDTVIDBySinageContentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadObjectveBySpeedway">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="speedway_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadObjectveBySpeedwayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadObjectveBySpeedwayResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadPatentTypeAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadPatentTypeAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadPatentTypeAllResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatentTypeById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatentTypeByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPatentTypeByIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SavePatentType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="patent_type_code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="patent_type_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="active" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="login_username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SavePatentTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SavePatentTypeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeletePatentType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeletePatentTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeletePatentTypeResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadPosition">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadPositionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadPositionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadPositionByUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadPositionByUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadPositionByUserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadTitleAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadTitleAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadTitleAllResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadTitleByUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadTitleByUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadTitleByUserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadRoomAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadRoomAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadRoomAllResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadRoomByFloorPlan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="floor_plan_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadRoomByFloorPlanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadRoomByFloorPlanResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadRoomByDesktop">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="desktop_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadRoomByDesktopResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadRoomByDesktopResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadRoomByFloor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="floor_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadRoomByFloorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadRoomByFloorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadRoomBySpeedway">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="speedway_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadRoomBySpeedwayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadRoomBySpeedwayResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadUserAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadUserAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadUserAllResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadUserByName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadUserByNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadUserByNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserByIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="title_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="surname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="department_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="position_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="login_username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveUserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteUserResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSignageContentByLEDTV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ledtv_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSignageContentByLEDTVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadSignageContentByLEDTVResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSignageContentBySignageSchedule">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ms_signage_template_schedule_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSignageContentBySignageScheduleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadSignageContentBySignageScheduleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSpeedwayAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadSpeedwayAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadSpeedwayAllResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSpeedwayByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="speedway_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSpeedwayByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadSpeedwayByIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveSpeedway">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="login_username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serial_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip_address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="install_position" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="setting_label" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="setting_description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="setting_session" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="setting_tag_populate_estimate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="keepalive_period_in_ms" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="keepalive_link_down_threshold" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="field_ping_interval_in_ms" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="emptry_field_timeout_in_ms" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="active_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="setting_time_correct_enabled" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="keepalive_is_enabled" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mld_is_enable" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="include_peak_rssi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="include_antenna_port_number" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="include_first_seen_time" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="include_last_seen_time" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="include_seen_count" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="include_channel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="include_phase_angle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="include_serialized_tid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ms_speedway_objective_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ms_room_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="setting_search_mode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filters_mode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="report_mode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonobject_antenna" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonobject_gpi" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonobject_tagfilter" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveSpeedwayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveSpeedwayResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSpeedwayDefaultMaxGPI">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetSpeedwayDefaultMaxGPIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetSpeedwayDefaultMaxGPIResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSpeedwayDefaultMaxAnt">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetSpeedwayDefaultMaxAntResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetSpeedwayDefaultMaxAntResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSpeedway">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSpeedwayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteSpeedwayResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSearchMode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchMode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSearchModeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadSearchModeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadFilterMode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FilterMode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadFilterModeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadFilterModeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadReportMode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReportMode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadReportModeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadReportModeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAutoStartMode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AutoStartMode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAutoStartModeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAutoStartModeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadGPILevel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GPILevel" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadGPILevelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadGPILevelResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAutoStopMode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AutoStopMode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAutoStopModeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAutoStopModeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadMemoryBank">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MemoryBank" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadMemoryBankResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadMemoryBankResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadFilterOp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FilterOp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadFilterOpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadFilterOpResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSpeedwayAntenna">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSpeedwayAntennaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadSpeedwayAntennaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSpeedwayGPI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSpeedwayGPIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadSpeedwayGPIResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSpeedwayTagFilter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSpeedwayTagFilterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadSpeedwayTagFilterResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserMapAuthorizeGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="groupid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserMapAuthorizeGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserMapAuthorizeGroupResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNotUserMapAuthorizeGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNotUserMapAuthorizeGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNotUserMapAuthorizeGroupResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadUserAll2">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadUserAll2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadUserAll2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadGroupPermissionAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadGroupPermissionAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadGroupPermissionAllResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveAuthorizeGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveAuthorizeGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveAuthorizeGroupResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="group_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="group_desc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="active" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveGroupResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveGroupUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveGroupUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveGroupUserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteGroupResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteGroupUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteGroupUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteGroupUserResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAuthorizeGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="groupid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAuthorizeGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAuthorizeGroupResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAuthorizeGroupMap">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="groupid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAuthorizeGroupMapResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAuthorizeGroupMapResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CheckAuthorizeGroupScreenByUserSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckAuthorizeGroupScreenByUser" />
+  </wsdl:message>
+  <wsdl:message name="CheckAuthorizeGroupScreenByUserSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckAuthorizeGroupScreenByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAuthorizeGroupMapSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAuthorizeGroupMap" />
+  </wsdl:message>
+  <wsdl:message name="LoadAuthorizeGroupMapSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAuthorizeGroupMapResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadUserByDepartmentSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadUserByDepartment" />
+  </wsdl:message>
+  <wsdl:message name="LoadUserByDepartmentSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadUserByDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadUserDeaprtByNameSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadUserDeaprtByName" />
+  </wsdl:message>
+  <wsdl:message name="LoadUserDeaprtByNameSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadUserDeaprtByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadMapGridDesktopAllSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadMapGridDesktopAll" />
+  </wsdl:message>
+  <wsdl:message name="LoadMapGridDesktopAllSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadMapGridDesktopAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetImageFloorPlanSoapIn">
+    <wsdl:part name="parameters" element="tns:GetImageFloorPlan" />
+  </wsdl:message>
+  <wsdl:message name="GetImageFloorPlanSoapOut">
+    <wsdl:part name="parameters" element="tns:GetImageFloorPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadFloorPlanByFloorAndRoomSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadFloorPlanByFloorAndRoom" />
+  </wsdl:message>
+  <wsdl:message name="LoadFloorPlanByFloorAndRoomSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadFloorPlanByFloorAndRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadGridLayoutActiveSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadGridLayoutActive" />
+  </wsdl:message>
+  <wsdl:message name="LoadGridLayoutActiveSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadGridLayoutActiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRoomDetailByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRoomDetailById" />
+  </wsdl:message>
+  <wsdl:message name="GetRoomDetailByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRoomDetailByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveCurrentInRoomSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveCurrentInRoom" />
+  </wsdl:message>
+  <wsdl:message name="SaveCurrentInRoomSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveCurrentInRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadOfficerRoomByRoomIdSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadOfficerRoomByRoomId" />
+  </wsdl:message>
+  <wsdl:message name="LoadOfficerRoomByRoomIdSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadOfficerRoomByRoomIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadFloorPlanByRoomIdSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadFloorPlanByRoomId" />
+  </wsdl:message>
+  <wsdl:message name="LoadFloorPlanByRoomIdSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadFloorPlanByRoomIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadOfficerMapLayoutByLayoutIdSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadOfficerMapLayoutByLayoutId" />
+  </wsdl:message>
+  <wsdl:message name="LoadOfficerMapLayoutByLayoutIdSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadOfficerMapLayoutByLayoutIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveMapGridSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveMapGrid" />
+  </wsdl:message>
+  <wsdl:message name="SaveMapGridSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveMapGridResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadSpeedWayReadAreaAllSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadSpeedWayReadAreaAll" />
+  </wsdl:message>
+  <wsdl:message name="LoadSpeedWayReadAreaAllSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadSpeedWayReadAreaAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadSpeedWayByRoomIdSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadSpeedWayByRoomId" />
+  </wsdl:message>
+  <wsdl:message name="LoadSpeedWayByRoomIdSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadSpeedWayByRoomIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAntennaBySpeedwaySoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAntennaBySpeedway" />
+  </wsdl:message>
+  <wsdl:message name="LoadAntennaBySpeedwaySoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAntennaBySpeedwayResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAttenaMapLayoutByPortSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAttenaMapLayoutByPort" />
+  </wsdl:message>
+  <wsdl:message name="LoadAttenaMapLayoutByPortSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAttenaMapLayoutByPortResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAntennaPlanByRoomIdSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAntennaPlanByRoomId" />
+  </wsdl:message>
+  <wsdl:message name="LoadAntennaPlanByRoomIdSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAntennaPlanByRoomIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveMapAntennaSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveMapAntenna" />
+  </wsdl:message>
+  <wsdl:message name="SaveMapAntennaSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveMapAntennaResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadSysConfigSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadSysConfig" />
+  </wsdl:message>
+  <wsdl:message name="LoadSysConfigSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadSysConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveSysconfigSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveSysconfig" />
+  </wsdl:message>
+  <wsdl:message name="SaveSysconfigSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveSysconfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadDesktopAllSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadDesktopAll" />
+  </wsdl:message>
+  <wsdl:message name="LoadDesktopAllSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadDesktopAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDesktopByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDesktopById" />
+  </wsdl:message>
+  <wsdl:message name="GetDesktopByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDesktopByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveDesktopSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveDesktop" />
+  </wsdl:message>
+  <wsdl:message name="SaveDesktopSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveDesktopResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDesktopSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteDesktop" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDesktopSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteDesktopResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadDepartmentSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadDepartment" />
+  </wsdl:message>
+  <wsdl:message name="LoadDepartmentSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadDepartmentByUserSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadDepartmentByUser" />
+  </wsdl:message>
+  <wsdl:message name="LoadDepartmentByUserSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadDepartmentByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadSinageScheduleAllSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadSinageScheduleAll" />
+  </wsdl:message>
+  <wsdl:message name="LoadSinageScheduleAllSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadSinageScheduleAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadSinageScheduleIDSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadSinageScheduleID" />
+  </wsdl:message>
+  <wsdl:message name="LoadSinageScheduleIDSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadSinageScheduleIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadMonthByDigitalSinageTemplateScheduleSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadMonthByDigitalSinageTemplateSchedule" />
+  </wsdl:message>
+  <wsdl:message name="LoadMonthByDigitalSinageTemplateScheduleSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadMonthByDigitalSinageTemplateScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadDayByDigitalSinageTemplateScheduleSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadDayByDigitalSinageTemplateSchedule" />
+  </wsdl:message>
+  <wsdl:message name="LoadDayByDigitalSinageTemplateScheduleSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadDayByDigitalSinageTemplateScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadSinageScheduleDailyByTemplateIDSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadSinageScheduleDailyByTemplateID" />
+  </wsdl:message>
+  <wsdl:message name="LoadSinageScheduleDailyByTemplateIDSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadSinageScheduleDailyByTemplateIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadSinageScheduleWeeklyByTemplateIDSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadSinageScheduleWeeklyByTemplateID" />
+  </wsdl:message>
+  <wsdl:message name="LoadSinageScheduleWeeklyByTemplateIDSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadSinageScheduleWeeklyByTemplateIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadSinageScheduleTimeByTemplateIDSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadSinageScheduleTimeByTemplateID" />
+  </wsdl:message>
+  <wsdl:message name="LoadSinageScheduleTimeByTemplateIDSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadSinageScheduleTimeByTemplateIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveSinageScheduleSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveSinageSchedule" />
+  </wsdl:message>
+  <wsdl:message name="SaveSinageScheduleSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveSinageScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSinageScheduleSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteSinageSchedule" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSinageScheduleSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteSinageScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadFloorAllSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadFloorAll" />
+  </wsdl:message>
+  <wsdl:message name="LoadFloorAllSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadFloorAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadFloorByFloorPlanSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadFloorByFloorPlan" />
+  </wsdl:message>
+  <wsdl:message name="LoadFloorByFloorPlanSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadFloorByFloorPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadFloorByDesktopSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadFloorByDesktop" />
+  </wsdl:message>
+  <wsdl:message name="LoadFloorByDesktopSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadFloorByDesktopResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadFloorBySpeedwaySoapIn">
+    <wsdl:part name="parameters" element="tns:LoadFloorBySpeedway" />
+  </wsdl:message>
+  <wsdl:message name="LoadFloorBySpeedwaySoapOut">
+    <wsdl:part name="parameters" element="tns:LoadFloorBySpeedwayResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadFloorByLEDTVSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadFloorByLEDTV" />
+  </wsdl:message>
+  <wsdl:message name="LoadFloorByLEDTVSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadFloorByLEDTVResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadFloorPlanAllSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadFloorPlanAll" />
+  </wsdl:message>
+  <wsdl:message name="LoadFloorPlanAllSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadFloorPlanAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFloorPlanByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFloorPlanById" />
+  </wsdl:message>
+  <wsdl:message name="GetFloorPlanByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFloorPlanByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveFloorPlanSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveFloorPlan" />
+  </wsdl:message>
+  <wsdl:message name="SaveFloorPlanSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveFloorPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFloorPlanSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteFloorPlan" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFloorPlanSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteFloorPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadGridLayoutAllSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadGridLayoutAll" />
+  </wsdl:message>
+  <wsdl:message name="LoadGridLayoutAllSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadGridLayoutAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGridLayoutByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGridLayoutById" />
+  </wsdl:message>
+  <wsdl:message name="GetGridLayoutByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGridLayoutByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveGridLayoutSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveGridLayout" />
+  </wsdl:message>
+  <wsdl:message name="SaveGridLayoutSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveGridLayoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteGridLayoutSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteGridLayout" />
+  </wsdl:message>
+  <wsdl:message name="DeleteGridLayoutSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteGridLayoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadLEDTVAllSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadLEDTVAll" />
+  </wsdl:message>
+  <wsdl:message name="LoadLEDTVAllSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadLEDTVAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadLEDTVIDSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadLEDTVID" />
+  </wsdl:message>
+  <wsdl:message name="LoadLEDTVIDSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadLEDTVIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveLEDTVSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveLEDTV" />
+  </wsdl:message>
+  <wsdl:message name="SaveLEDTVSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveLEDTVResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLEDTVSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteLEDTV" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLEDTVSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteLEDTVResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadLEDTVBySinageScheduleSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadLEDTVBySinageSchedule" />
+  </wsdl:message>
+  <wsdl:message name="LoadLEDTVBySinageScheduleSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadLEDTVBySinageScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadLEDTVIDBySinageContentSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadLEDTVIDBySinageContent" />
+  </wsdl:message>
+  <wsdl:message name="LoadLEDTVIDBySinageContentSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadLEDTVIDBySinageContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadObjectveBySpeedwaySoapIn">
+    <wsdl:part name="parameters" element="tns:LoadObjectveBySpeedway" />
+  </wsdl:message>
+  <wsdl:message name="LoadObjectveBySpeedwaySoapOut">
+    <wsdl:part name="parameters" element="tns:LoadObjectveBySpeedwayResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadPatentTypeAllSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadPatentTypeAll" />
+  </wsdl:message>
+  <wsdl:message name="LoadPatentTypeAllSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadPatentTypeAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatentTypeByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPatentTypeById" />
+  </wsdl:message>
+  <wsdl:message name="GetPatentTypeByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPatentTypeByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="SavePatentTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:SavePatentType" />
+  </wsdl:message>
+  <wsdl:message name="SavePatentTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:SavePatentTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeletePatentTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:DeletePatentType" />
+  </wsdl:message>
+  <wsdl:message name="DeletePatentTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:DeletePatentTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadPositionSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadPosition" />
+  </wsdl:message>
+  <wsdl:message name="LoadPositionSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadPositionResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadPositionByUserSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadPositionByUser" />
+  </wsdl:message>
+  <wsdl:message name="LoadPositionByUserSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadPositionByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadTitleAllSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadTitleAll" />
+  </wsdl:message>
+  <wsdl:message name="LoadTitleAllSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadTitleAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadTitleByUserSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadTitleByUser" />
+  </wsdl:message>
+  <wsdl:message name="LoadTitleByUserSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadTitleByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadRoomAllSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadRoomAll" />
+  </wsdl:message>
+  <wsdl:message name="LoadRoomAllSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadRoomAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadRoomByFloorPlanSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadRoomByFloorPlan" />
+  </wsdl:message>
+  <wsdl:message name="LoadRoomByFloorPlanSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadRoomByFloorPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadRoomByDesktopSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadRoomByDesktop" />
+  </wsdl:message>
+  <wsdl:message name="LoadRoomByDesktopSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadRoomByDesktopResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadRoomByFloorSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadRoomByFloor" />
+  </wsdl:message>
+  <wsdl:message name="LoadRoomByFloorSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadRoomByFloorResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadRoomBySpeedwaySoapIn">
+    <wsdl:part name="parameters" element="tns:LoadRoomBySpeedway" />
+  </wsdl:message>
+  <wsdl:message name="LoadRoomBySpeedwaySoapOut">
+    <wsdl:part name="parameters" element="tns:LoadRoomBySpeedwayResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadUserAllSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadUserAll" />
+  </wsdl:message>
+  <wsdl:message name="LoadUserAllSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadUserAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadUserByNameSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadUserByName" />
+  </wsdl:message>
+  <wsdl:message name="LoadUserByNameSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadUserByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserById" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveUserSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveUser" />
+  </wsdl:message>
+  <wsdl:message name="SaveUserSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadSignageContentByLEDTVSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadSignageContentByLEDTV" />
+  </wsdl:message>
+  <wsdl:message name="LoadSignageContentByLEDTVSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadSignageContentByLEDTVResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadSignageContentBySignageScheduleSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadSignageContentBySignageSchedule" />
+  </wsdl:message>
+  <wsdl:message name="LoadSignageContentBySignageScheduleSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadSignageContentBySignageScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadSpeedwayAllSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadSpeedwayAll" />
+  </wsdl:message>
+  <wsdl:message name="LoadSpeedwayAllSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadSpeedwayAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadSpeedwayByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadSpeedwayByID" />
+  </wsdl:message>
+  <wsdl:message name="LoadSpeedwayByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadSpeedwayByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveSpeedwaySoapIn">
+    <wsdl:part name="parameters" element="tns:SaveSpeedway" />
+  </wsdl:message>
+  <wsdl:message name="SaveSpeedwaySoapOut">
+    <wsdl:part name="parameters" element="tns:SaveSpeedwayResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSpeedwayDefaultMaxGPISoapIn">
+    <wsdl:part name="parameters" element="tns:GetSpeedwayDefaultMaxGPI" />
+  </wsdl:message>
+  <wsdl:message name="GetSpeedwayDefaultMaxGPISoapOut">
+    <wsdl:part name="parameters" element="tns:GetSpeedwayDefaultMaxGPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSpeedwayDefaultMaxAntSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSpeedwayDefaultMaxAnt" />
+  </wsdl:message>
+  <wsdl:message name="GetSpeedwayDefaultMaxAntSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSpeedwayDefaultMaxAntResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSpeedwaySoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteSpeedway" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSpeedwaySoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteSpeedwayResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadSearchModeSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadSearchMode" />
+  </wsdl:message>
+  <wsdl:message name="LoadSearchModeSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadSearchModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadFilterModeSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadFilterMode" />
+  </wsdl:message>
+  <wsdl:message name="LoadFilterModeSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadFilterModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadReportModeSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadReportMode" />
+  </wsdl:message>
+  <wsdl:message name="LoadReportModeSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadReportModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAutoStartModeSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAutoStartMode" />
+  </wsdl:message>
+  <wsdl:message name="LoadAutoStartModeSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAutoStartModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadGPILevelSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadGPILevel" />
+  </wsdl:message>
+  <wsdl:message name="LoadGPILevelSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadGPILevelResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAutoStopModeSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAutoStopMode" />
+  </wsdl:message>
+  <wsdl:message name="LoadAutoStopModeSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAutoStopModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadMemoryBankSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadMemoryBank" />
+  </wsdl:message>
+  <wsdl:message name="LoadMemoryBankSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadMemoryBankResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadFilterOpSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadFilterOp" />
+  </wsdl:message>
+  <wsdl:message name="LoadFilterOpSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadFilterOpResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadSpeedwayAntennaSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadSpeedwayAntenna" />
+  </wsdl:message>
+  <wsdl:message name="LoadSpeedwayAntennaSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadSpeedwayAntennaResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadSpeedwayGPISoapIn">
+    <wsdl:part name="parameters" element="tns:LoadSpeedwayGPI" />
+  </wsdl:message>
+  <wsdl:message name="LoadSpeedwayGPISoapOut">
+    <wsdl:part name="parameters" element="tns:LoadSpeedwayGPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadSpeedwayTagFilterSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadSpeedwayTagFilter" />
+  </wsdl:message>
+  <wsdl:message name="LoadSpeedwayTagFilterSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadSpeedwayTagFilterResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserMapAuthorizeGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserMapAuthorizeGroup" />
+  </wsdl:message>
+  <wsdl:message name="GetUserMapAuthorizeGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserMapAuthorizeGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNotUserMapAuthorizeGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNotUserMapAuthorizeGroup" />
+  </wsdl:message>
+  <wsdl:message name="GetNotUserMapAuthorizeGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNotUserMapAuthorizeGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadUserAll2SoapIn">
+    <wsdl:part name="parameters" element="tns:LoadUserAll2" />
+  </wsdl:message>
+  <wsdl:message name="LoadUserAll2SoapOut">
+    <wsdl:part name="parameters" element="tns:LoadUserAll2Response" />
+  </wsdl:message>
+  <wsdl:message name="LoadGroupPermissionAllSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadGroupPermissionAll" />
+  </wsdl:message>
+  <wsdl:message name="LoadGroupPermissionAllSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadGroupPermissionAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveAuthorizeGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveAuthorizeGroup" />
+  </wsdl:message>
+  <wsdl:message name="SaveAuthorizeGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveAuthorizeGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveGroup" />
+  </wsdl:message>
+  <wsdl:message name="SaveGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveGroupUserSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveGroupUser" />
+  </wsdl:message>
+  <wsdl:message name="SaveGroupUserSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveGroupUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteGroup" />
+  </wsdl:message>
+  <wsdl:message name="DeleteGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteGroupUserSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteGroupUser" />
+  </wsdl:message>
+  <wsdl:message name="DeleteGroupUserSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteGroupUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAuthorizeGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAuthorizeGroup" />
+  </wsdl:message>
+  <wsdl:message name="LoadAuthorizeGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAuthorizeGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizeGroupMapSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAuthorizeGroupMap" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizeGroupMapSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAuthorizeGroupMapResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceSoap">
+    <wsdl:operation name="CheckAuthorizeGroupScreenByUser">
+      <wsdl:input message="tns:CheckAuthorizeGroupScreenByUserSoapIn" />
+      <wsdl:output message="tns:CheckAuthorizeGroupScreenByUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAuthorizeGroupMap">
+      <wsdl:input message="tns:LoadAuthorizeGroupMapSoapIn" />
+      <wsdl:output message="tns:LoadAuthorizeGroupMapSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserByDepartment">
+      <wsdl:input message="tns:LoadUserByDepartmentSoapIn" />
+      <wsdl:output message="tns:LoadUserByDepartmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserDeaprtByName">
+      <wsdl:input message="tns:LoadUserDeaprtByNameSoapIn" />
+      <wsdl:output message="tns:LoadUserDeaprtByNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadMapGridDesktopAll">
+      <wsdl:input message="tns:LoadMapGridDesktopAllSoapIn" />
+      <wsdl:output message="tns:LoadMapGridDesktopAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImageFloorPlan">
+      <wsdl:input message="tns:GetImageFloorPlanSoapIn" />
+      <wsdl:output message="tns:GetImageFloorPlanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadFloorPlanByFloorAndRoom">
+      <wsdl:input message="tns:LoadFloorPlanByFloorAndRoomSoapIn" />
+      <wsdl:output message="tns:LoadFloorPlanByFloorAndRoomSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadGridLayoutActive">
+      <wsdl:input message="tns:LoadGridLayoutActiveSoapIn" />
+      <wsdl:output message="tns:LoadGridLayoutActiveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoomDetailById">
+      <wsdl:input message="tns:GetRoomDetailByIdSoapIn" />
+      <wsdl:output message="tns:GetRoomDetailByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCurrentInRoom">
+      <wsdl:input message="tns:SaveCurrentInRoomSoapIn" />
+      <wsdl:output message="tns:SaveCurrentInRoomSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadOfficerRoomByRoomId">
+      <wsdl:input message="tns:LoadOfficerRoomByRoomIdSoapIn" />
+      <wsdl:output message="tns:LoadOfficerRoomByRoomIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadFloorPlanByRoomId">
+      <wsdl:input message="tns:LoadFloorPlanByRoomIdSoapIn" />
+      <wsdl:output message="tns:LoadFloorPlanByRoomIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadOfficerMapLayoutByLayoutId">
+      <wsdl:input message="tns:LoadOfficerMapLayoutByLayoutIdSoapIn" />
+      <wsdl:output message="tns:LoadOfficerMapLayoutByLayoutIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveMapGrid">
+      <wsdl:input message="tns:SaveMapGridSoapIn" />
+      <wsdl:output message="tns:SaveMapGridSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadSpeedWayReadAreaAll">
+      <wsdl:input message="tns:LoadSpeedWayReadAreaAllSoapIn" />
+      <wsdl:output message="tns:LoadSpeedWayReadAreaAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadSpeedWayByRoomId">
+      <wsdl:input message="tns:LoadSpeedWayByRoomIdSoapIn" />
+      <wsdl:output message="tns:LoadSpeedWayByRoomIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAntennaBySpeedway">
+      <wsdl:input message="tns:LoadAntennaBySpeedwaySoapIn" />
+      <wsdl:output message="tns:LoadAntennaBySpeedwaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAttenaMapLayoutByPort">
+      <wsdl:input message="tns:LoadAttenaMapLayoutByPortSoapIn" />
+      <wsdl:output message="tns:LoadAttenaMapLayoutByPortSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAntennaPlanByRoomId">
+      <wsdl:input message="tns:LoadAntennaPlanByRoomIdSoapIn" />
+      <wsdl:output message="tns:LoadAntennaPlanByRoomIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveMapAntenna">
+      <wsdl:input message="tns:SaveMapAntennaSoapIn" />
+      <wsdl:output message="tns:SaveMapAntennaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadSysConfig">
+      <wsdl:input message="tns:LoadSysConfigSoapIn" />
+      <wsdl:output message="tns:LoadSysConfigSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSysconfig">
+      <wsdl:input message="tns:SaveSysconfigSoapIn" />
+      <wsdl:output message="tns:SaveSysconfigSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadDesktopAll">
+      <wsdl:input message="tns:LoadDesktopAllSoapIn" />
+      <wsdl:output message="tns:LoadDesktopAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDesktopById">
+      <wsdl:input message="tns:GetDesktopByIdSoapIn" />
+      <wsdl:output message="tns:GetDesktopByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDesktop">
+      <wsdl:input message="tns:SaveDesktopSoapIn" />
+      <wsdl:output message="tns:SaveDesktopSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDesktop">
+      <wsdl:input message="tns:DeleteDesktopSoapIn" />
+      <wsdl:output message="tns:DeleteDesktopSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadDepartment">
+      <wsdl:input message="tns:LoadDepartmentSoapIn" />
+      <wsdl:output message="tns:LoadDepartmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadDepartmentByUser">
+      <wsdl:input message="tns:LoadDepartmentByUserSoapIn" />
+      <wsdl:output message="tns:LoadDepartmentByUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadSinageScheduleAll">
+      <wsdl:input message="tns:LoadSinageScheduleAllSoapIn" />
+      <wsdl:output message="tns:LoadSinageScheduleAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadSinageScheduleID">
+      <wsdl:input message="tns:LoadSinageScheduleIDSoapIn" />
+      <wsdl:output message="tns:LoadSinageScheduleIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadMonthByDigitalSinageTemplateSchedule">
+      <wsdl:input message="tns:LoadMonthByDigitalSinageTemplateScheduleSoapIn" />
+      <wsdl:output message="tns:LoadMonthByDigitalSinageTemplateScheduleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadDayByDigitalSinageTemplateSchedule">
+      <wsdl:input message="tns:LoadDayByDigitalSinageTemplateScheduleSoapIn" />
+      <wsdl:output message="tns:LoadDayByDigitalSinageTemplateScheduleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadSinageScheduleDailyByTemplateID">
+      <wsdl:input message="tns:LoadSinageScheduleDailyByTemplateIDSoapIn" />
+      <wsdl:output message="tns:LoadSinageScheduleDailyByTemplateIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadSinageScheduleWeeklyByTemplateID">
+      <wsdl:input message="tns:LoadSinageScheduleWeeklyByTemplateIDSoapIn" />
+      <wsdl:output message="tns:LoadSinageScheduleWeeklyByTemplateIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadSinageScheduleTimeByTemplateID">
+      <wsdl:input message="tns:LoadSinageScheduleTimeByTemplateIDSoapIn" />
+      <wsdl:output message="tns:LoadSinageScheduleTimeByTemplateIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSinageSchedule">
+      <wsdl:input message="tns:SaveSinageScheduleSoapIn" />
+      <wsdl:output message="tns:SaveSinageScheduleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSinageSchedule">
+      <wsdl:input message="tns:DeleteSinageScheduleSoapIn" />
+      <wsdl:output message="tns:DeleteSinageScheduleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadFloorAll">
+      <wsdl:input message="tns:LoadFloorAllSoapIn" />
+      <wsdl:output message="tns:LoadFloorAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadFloorByFloorPlan">
+      <wsdl:input message="tns:LoadFloorByFloorPlanSoapIn" />
+      <wsdl:output message="tns:LoadFloorByFloorPlanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadFloorByDesktop">
+      <wsdl:input message="tns:LoadFloorByDesktopSoapIn" />
+      <wsdl:output message="tns:LoadFloorByDesktopSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadFloorBySpeedway">
+      <wsdl:input message="tns:LoadFloorBySpeedwaySoapIn" />
+      <wsdl:output message="tns:LoadFloorBySpeedwaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadFloorByLEDTV">
+      <wsdl:input message="tns:LoadFloorByLEDTVSoapIn" />
+      <wsdl:output message="tns:LoadFloorByLEDTVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadFloorPlanAll">
+      <wsdl:input message="tns:LoadFloorPlanAllSoapIn" />
+      <wsdl:output message="tns:LoadFloorPlanAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFloorPlanById">
+      <wsdl:input message="tns:GetFloorPlanByIdSoapIn" />
+      <wsdl:output message="tns:GetFloorPlanByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveFloorPlan">
+      <wsdl:input message="tns:SaveFloorPlanSoapIn" />
+      <wsdl:output message="tns:SaveFloorPlanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFloorPlan">
+      <wsdl:input message="tns:DeleteFloorPlanSoapIn" />
+      <wsdl:output message="tns:DeleteFloorPlanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadGridLayoutAll">
+      <wsdl:input message="tns:LoadGridLayoutAllSoapIn" />
+      <wsdl:output message="tns:LoadGridLayoutAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGridLayoutById">
+      <wsdl:input message="tns:GetGridLayoutByIdSoapIn" />
+      <wsdl:output message="tns:GetGridLayoutByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveGridLayout">
+      <wsdl:input message="tns:SaveGridLayoutSoapIn" />
+      <wsdl:output message="tns:SaveGridLayoutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGridLayout">
+      <wsdl:input message="tns:DeleteGridLayoutSoapIn" />
+      <wsdl:output message="tns:DeleteGridLayoutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadLEDTVAll">
+      <wsdl:input message="tns:LoadLEDTVAllSoapIn" />
+      <wsdl:output message="tns:LoadLEDTVAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadLEDTVID">
+      <wsdl:input message="tns:LoadLEDTVIDSoapIn" />
+      <wsdl:output message="tns:LoadLEDTVIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveLEDTV">
+      <wsdl:input message="tns:SaveLEDTVSoapIn" />
+      <wsdl:output message="tns:SaveLEDTVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLEDTV">
+      <wsdl:input message="tns:DeleteLEDTVSoapIn" />
+      <wsdl:output message="tns:DeleteLEDTVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadLEDTVBySinageSchedule">
+      <wsdl:input message="tns:LoadLEDTVBySinageScheduleSoapIn" />
+      <wsdl:output message="tns:LoadLEDTVBySinageScheduleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadLEDTVIDBySinageContent">
+      <wsdl:input message="tns:LoadLEDTVIDBySinageContentSoapIn" />
+      <wsdl:output message="tns:LoadLEDTVIDBySinageContentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadObjectveBySpeedway">
+      <wsdl:input message="tns:LoadObjectveBySpeedwaySoapIn" />
+      <wsdl:output message="tns:LoadObjectveBySpeedwaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatentTypeAll">
+      <wsdl:input message="tns:LoadPatentTypeAllSoapIn" />
+      <wsdl:output message="tns:LoadPatentTypeAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatentTypeById">
+      <wsdl:input message="tns:GetPatentTypeByIdSoapIn" />
+      <wsdl:output message="tns:GetPatentTypeByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePatentType">
+      <wsdl:input message="tns:SavePatentTypeSoapIn" />
+      <wsdl:output message="tns:SavePatentTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePatentType">
+      <wsdl:input message="tns:DeletePatentTypeSoapIn" />
+      <wsdl:output message="tns:DeletePatentTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadPosition">
+      <wsdl:input message="tns:LoadPositionSoapIn" />
+      <wsdl:output message="tns:LoadPositionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadPositionByUser">
+      <wsdl:input message="tns:LoadPositionByUserSoapIn" />
+      <wsdl:output message="tns:LoadPositionByUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadTitleAll">
+      <wsdl:input message="tns:LoadTitleAllSoapIn" />
+      <wsdl:output message="tns:LoadTitleAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadTitleByUser">
+      <wsdl:input message="tns:LoadTitleByUserSoapIn" />
+      <wsdl:output message="tns:LoadTitleByUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadRoomAll">
+      <wsdl:input message="tns:LoadRoomAllSoapIn" />
+      <wsdl:output message="tns:LoadRoomAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadRoomByFloorPlan">
+      <wsdl:input message="tns:LoadRoomByFloorPlanSoapIn" />
+      <wsdl:output message="tns:LoadRoomByFloorPlanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadRoomByDesktop">
+      <wsdl:input message="tns:LoadRoomByDesktopSoapIn" />
+      <wsdl:output message="tns:LoadRoomByDesktopSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadRoomByFloor">
+      <wsdl:input message="tns:LoadRoomByFloorSoapIn" />
+      <wsdl:output message="tns:LoadRoomByFloorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadRoomBySpeedway">
+      <wsdl:input message="tns:LoadRoomBySpeedwaySoapIn" />
+      <wsdl:output message="tns:LoadRoomBySpeedwaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserAll">
+      <wsdl:input message="tns:LoadUserAllSoapIn" />
+      <wsdl:output message="tns:LoadUserAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserByName">
+      <wsdl:input message="tns:LoadUserByNameSoapIn" />
+      <wsdl:output message="tns:LoadUserByNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <wsdl:input message="tns:GetUserByIdSoapIn" />
+      <wsdl:output message="tns:GetUserByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUser">
+      <wsdl:input message="tns:SaveUserSoapIn" />
+      <wsdl:output message="tns:SaveUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input message="tns:DeleteUserSoapIn" />
+      <wsdl:output message="tns:DeleteUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadSignageContentByLEDTV">
+      <wsdl:input message="tns:LoadSignageContentByLEDTVSoapIn" />
+      <wsdl:output message="tns:LoadSignageContentByLEDTVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadSignageContentBySignageSchedule">
+      <wsdl:input message="tns:LoadSignageContentBySignageScheduleSoapIn" />
+      <wsdl:output message="tns:LoadSignageContentBySignageScheduleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadSpeedwayAll">
+      <wsdl:input message="tns:LoadSpeedwayAllSoapIn" />
+      <wsdl:output message="tns:LoadSpeedwayAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadSpeedwayByID">
+      <wsdl:input message="tns:LoadSpeedwayByIDSoapIn" />
+      <wsdl:output message="tns:LoadSpeedwayByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSpeedway">
+      <wsdl:input message="tns:SaveSpeedwaySoapIn" />
+      <wsdl:output message="tns:SaveSpeedwaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpeedwayDefaultMaxGPI">
+      <wsdl:input message="tns:GetSpeedwayDefaultMaxGPISoapIn" />
+      <wsdl:output message="tns:GetSpeedwayDefaultMaxGPISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpeedwayDefaultMaxAnt">
+      <wsdl:input message="tns:GetSpeedwayDefaultMaxAntSoapIn" />
+      <wsdl:output message="tns:GetSpeedwayDefaultMaxAntSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSpeedway">
+      <wsdl:input message="tns:DeleteSpeedwaySoapIn" />
+      <wsdl:output message="tns:DeleteSpeedwaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadSearchMode">
+      <wsdl:input message="tns:LoadSearchModeSoapIn" />
+      <wsdl:output message="tns:LoadSearchModeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadFilterMode">
+      <wsdl:input message="tns:LoadFilterModeSoapIn" />
+      <wsdl:output message="tns:LoadFilterModeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadReportMode">
+      <wsdl:input message="tns:LoadReportModeSoapIn" />
+      <wsdl:output message="tns:LoadReportModeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAutoStartMode">
+      <wsdl:input message="tns:LoadAutoStartModeSoapIn" />
+      <wsdl:output message="tns:LoadAutoStartModeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadGPILevel">
+      <wsdl:input message="tns:LoadGPILevelSoapIn" />
+      <wsdl:output message="tns:LoadGPILevelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAutoStopMode">
+      <wsdl:input message="tns:LoadAutoStopModeSoapIn" />
+      <wsdl:output message="tns:LoadAutoStopModeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadMemoryBank">
+      <wsdl:input message="tns:LoadMemoryBankSoapIn" />
+      <wsdl:output message="tns:LoadMemoryBankSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadFilterOp">
+      <wsdl:input message="tns:LoadFilterOpSoapIn" />
+      <wsdl:output message="tns:LoadFilterOpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadSpeedwayAntenna">
+      <wsdl:input message="tns:LoadSpeedwayAntennaSoapIn" />
+      <wsdl:output message="tns:LoadSpeedwayAntennaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadSpeedwayGPI">
+      <wsdl:input message="tns:LoadSpeedwayGPISoapIn" />
+      <wsdl:output message="tns:LoadSpeedwayGPISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadSpeedwayTagFilter">
+      <wsdl:input message="tns:LoadSpeedwayTagFilterSoapIn" />
+      <wsdl:output message="tns:LoadSpeedwayTagFilterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserMapAuthorizeGroup">
+      <wsdl:input message="tns:GetUserMapAuthorizeGroupSoapIn" />
+      <wsdl:output message="tns:GetUserMapAuthorizeGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNotUserMapAuthorizeGroup">
+      <wsdl:input message="tns:GetNotUserMapAuthorizeGroupSoapIn" />
+      <wsdl:output message="tns:GetNotUserMapAuthorizeGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserAll2">
+      <wsdl:input message="tns:LoadUserAll2SoapIn" />
+      <wsdl:output message="tns:LoadUserAll2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadGroupPermissionAll">
+      <wsdl:input message="tns:LoadGroupPermissionAllSoapIn" />
+      <wsdl:output message="tns:LoadGroupPermissionAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAuthorizeGroup">
+      <wsdl:input message="tns:SaveAuthorizeGroupSoapIn" />
+      <wsdl:output message="tns:SaveAuthorizeGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveGroup">
+      <wsdl:input message="tns:SaveGroupSoapIn" />
+      <wsdl:output message="tns:SaveGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveGroupUser">
+      <wsdl:input message="tns:SaveGroupUserSoapIn" />
+      <wsdl:output message="tns:SaveGroupUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGroup">
+      <wsdl:input message="tns:DeleteGroupSoapIn" />
+      <wsdl:output message="tns:DeleteGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGroupUser">
+      <wsdl:input message="tns:DeleteGroupUserSoapIn" />
+      <wsdl:output message="tns:DeleteGroupUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAuthorizeGroup">
+      <wsdl:input message="tns:LoadAuthorizeGroupSoapIn" />
+      <wsdl:output message="tns:LoadAuthorizeGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizeGroupMap">
+      <wsdl:input message="tns:GetAuthorizeGroupMapSoapIn" />
+      <wsdl:output message="tns:GetAuthorizeGroupMapSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceSoap" type="tns:WebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CheckAuthorizeGroupScreenByUser">
+      <soap:operation soapAction="http://tempuri.org/CheckAuthorizeGroupScreenByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAuthorizeGroupMap">
+      <soap:operation soapAction="http://tempuri.org/LoadAuthorizeGroupMap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserByDepartment">
+      <soap:operation soapAction="http://tempuri.org/LoadUserByDepartment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserDeaprtByName">
+      <soap:operation soapAction="http://tempuri.org/LoadUserDeaprtByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadMapGridDesktopAll">
+      <soap:operation soapAction="http://tempuri.org/LoadMapGridDesktopAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageFloorPlan">
+      <soap:operation soapAction="http://tempuri.org/GetImageFloorPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFloorPlanByFloorAndRoom">
+      <soap:operation soapAction="http://tempuri.org/LoadFloorPlanByFloorAndRoom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadGridLayoutActive">
+      <soap:operation soapAction="http://tempuri.org/LoadGridLayoutActive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoomDetailById">
+      <soap:operation soapAction="http://tempuri.org/GetRoomDetailById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCurrentInRoom">
+      <soap:operation soapAction="http://tempuri.org/SaveCurrentInRoom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadOfficerRoomByRoomId">
+      <soap:operation soapAction="http://tempuri.org/LoadOfficerRoomByRoomId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFloorPlanByRoomId">
+      <soap:operation soapAction="http://tempuri.org/LoadFloorPlanByRoomId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadOfficerMapLayoutByLayoutId">
+      <soap:operation soapAction="http://tempuri.org/LoadOfficerMapLayoutByLayoutId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveMapGrid">
+      <soap:operation soapAction="http://tempuri.org/SaveMapGrid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSpeedWayReadAreaAll">
+      <soap:operation soapAction="http://tempuri.org/LoadSpeedWayReadAreaAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSpeedWayByRoomId">
+      <soap:operation soapAction="http://tempuri.org/LoadSpeedWayByRoomId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAntennaBySpeedway">
+      <soap:operation soapAction="http://tempuri.org/LoadAntennaBySpeedway" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAttenaMapLayoutByPort">
+      <soap:operation soapAction="http://tempuri.org/LoadAttenaMapLayoutByPort" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAntennaPlanByRoomId">
+      <soap:operation soapAction="http://tempuri.org/LoadAntennaPlanByRoomId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveMapAntenna">
+      <soap:operation soapAction="http://tempuri.org/SaveMapAntenna" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSysConfig">
+      <soap:operation soapAction="http://tempuri.org/LoadSysConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSysconfig">
+      <soap:operation soapAction="http://tempuri.org/SaveSysconfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadDesktopAll">
+      <soap:operation soapAction="http://tempuri.org/LoadDesktopAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDesktopById">
+      <soap:operation soapAction="http://tempuri.org/GetDesktopById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDesktop">
+      <soap:operation soapAction="http://tempuri.org/SaveDesktop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDesktop">
+      <soap:operation soapAction="http://tempuri.org/DeleteDesktop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadDepartment">
+      <soap:operation soapAction="http://tempuri.org/LoadDepartment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadDepartmentByUser">
+      <soap:operation soapAction="http://tempuri.org/LoadDepartmentByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSinageScheduleAll">
+      <soap:operation soapAction="http://tempuri.org/LoadSinageScheduleAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSinageScheduleID">
+      <soap:operation soapAction="http://tempuri.org/LoadSinageScheduleID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadMonthByDigitalSinageTemplateSchedule">
+      <soap:operation soapAction="http://tempuri.org/LoadMonthByDigitalSinageTemplateSchedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadDayByDigitalSinageTemplateSchedule">
+      <soap:operation soapAction="http://tempuri.org/LoadDayByDigitalSinageTemplateSchedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSinageScheduleDailyByTemplateID">
+      <soap:operation soapAction="http://tempuri.org/LoadSinageScheduleDailyByTemplateID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSinageScheduleWeeklyByTemplateID">
+      <soap:operation soapAction="http://tempuri.org/LoadSinageScheduleWeeklyByTemplateID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSinageScheduleTimeByTemplateID">
+      <soap:operation soapAction="http://tempuri.org/LoadSinageScheduleTimeByTemplateID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSinageSchedule">
+      <soap:operation soapAction="http://tempuri.org/SaveSinageSchedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSinageSchedule">
+      <soap:operation soapAction="http://tempuri.org/DeleteSinageSchedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFloorAll">
+      <soap:operation soapAction="http://tempuri.org/LoadFloorAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFloorByFloorPlan">
+      <soap:operation soapAction="http://tempuri.org/LoadFloorByFloorPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFloorByDesktop">
+      <soap:operation soapAction="http://tempuri.org/LoadFloorByDesktop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFloorBySpeedway">
+      <soap:operation soapAction="http://tempuri.org/LoadFloorBySpeedway" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFloorByLEDTV">
+      <soap:operation soapAction="http://tempuri.org/LoadFloorByLEDTV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFloorPlanAll">
+      <soap:operation soapAction="http://tempuri.org/LoadFloorPlanAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFloorPlanById">
+      <soap:operation soapAction="http://tempuri.org/GetFloorPlanById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveFloorPlan">
+      <soap:operation soapAction="http://tempuri.org/SaveFloorPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFloorPlan">
+      <soap:operation soapAction="http://tempuri.org/DeleteFloorPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadGridLayoutAll">
+      <soap:operation soapAction="http://tempuri.org/LoadGridLayoutAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGridLayoutById">
+      <soap:operation soapAction="http://tempuri.org/GetGridLayoutById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveGridLayout">
+      <soap:operation soapAction="http://tempuri.org/SaveGridLayout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGridLayout">
+      <soap:operation soapAction="http://tempuri.org/DeleteGridLayout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadLEDTVAll">
+      <soap:operation soapAction="http://tempuri.org/LoadLEDTVAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadLEDTVID">
+      <soap:operation soapAction="http://tempuri.org/LoadLEDTVID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveLEDTV">
+      <soap:operation soapAction="http://tempuri.org/SaveLEDTV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLEDTV">
+      <soap:operation soapAction="http://tempuri.org/DeleteLEDTV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadLEDTVBySinageSchedule">
+      <soap:operation soapAction="http://tempuri.org/LoadLEDTVBySinageSchedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadLEDTVIDBySinageContent">
+      <soap:operation soapAction="http://tempuri.org/LoadLEDTVIDBySinageContent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadObjectveBySpeedway">
+      <soap:operation soapAction="http://tempuri.org/LoadObjectveBySpeedway" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatentTypeAll">
+      <soap:operation soapAction="http://tempuri.org/LoadPatentTypeAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatentTypeById">
+      <soap:operation soapAction="http://tempuri.org/GetPatentTypeById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePatentType">
+      <soap:operation soapAction="http://tempuri.org/SavePatentType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePatentType">
+      <soap:operation soapAction="http://tempuri.org/DeletePatentType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPosition">
+      <soap:operation soapAction="http://tempuri.org/LoadPosition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPositionByUser">
+      <soap:operation soapAction="http://tempuri.org/LoadPositionByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTitleAll">
+      <soap:operation soapAction="http://tempuri.org/LoadTitleAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTitleByUser">
+      <soap:operation soapAction="http://tempuri.org/LoadTitleByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadRoomAll">
+      <soap:operation soapAction="http://tempuri.org/LoadRoomAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadRoomByFloorPlan">
+      <soap:operation soapAction="http://tempuri.org/LoadRoomByFloorPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadRoomByDesktop">
+      <soap:operation soapAction="http://tempuri.org/LoadRoomByDesktop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadRoomByFloor">
+      <soap:operation soapAction="http://tempuri.org/LoadRoomByFloor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadRoomBySpeedway">
+      <soap:operation soapAction="http://tempuri.org/LoadRoomBySpeedway" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserAll">
+      <soap:operation soapAction="http://tempuri.org/LoadUserAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserByName">
+      <soap:operation soapAction="http://tempuri.org/LoadUserByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <soap:operation soapAction="http://tempuri.org/GetUserById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUser">
+      <soap:operation soapAction="http://tempuri.org/SaveUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://tempuri.org/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSignageContentByLEDTV">
+      <soap:operation soapAction="http://tempuri.org/LoadSignageContentByLEDTV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSignageContentBySignageSchedule">
+      <soap:operation soapAction="http://tempuri.org/LoadSignageContentBySignageSchedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSpeedwayAll">
+      <soap:operation soapAction="http://tempuri.org/LoadSpeedwayAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSpeedwayByID">
+      <soap:operation soapAction="http://tempuri.org/LoadSpeedwayByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSpeedway">
+      <soap:operation soapAction="http://tempuri.org/SaveSpeedway" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpeedwayDefaultMaxGPI">
+      <soap:operation soapAction="http://tempuri.org/GetSpeedwayDefaultMaxGPI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpeedwayDefaultMaxAnt">
+      <soap:operation soapAction="http://tempuri.org/GetSpeedwayDefaultMaxAnt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSpeedway">
+      <soap:operation soapAction="http://tempuri.org/DeleteSpeedway" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSearchMode">
+      <soap:operation soapAction="http://tempuri.org/LoadSearchMode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFilterMode">
+      <soap:operation soapAction="http://tempuri.org/LoadFilterMode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadReportMode">
+      <soap:operation soapAction="http://tempuri.org/LoadReportMode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAutoStartMode">
+      <soap:operation soapAction="http://tempuri.org/LoadAutoStartMode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadGPILevel">
+      <soap:operation soapAction="http://tempuri.org/LoadGPILevel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAutoStopMode">
+      <soap:operation soapAction="http://tempuri.org/LoadAutoStopMode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadMemoryBank">
+      <soap:operation soapAction="http://tempuri.org/LoadMemoryBank" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFilterOp">
+      <soap:operation soapAction="http://tempuri.org/LoadFilterOp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSpeedwayAntenna">
+      <soap:operation soapAction="http://tempuri.org/LoadSpeedwayAntenna" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSpeedwayGPI">
+      <soap:operation soapAction="http://tempuri.org/LoadSpeedwayGPI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSpeedwayTagFilter">
+      <soap:operation soapAction="http://tempuri.org/LoadSpeedwayTagFilter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserMapAuthorizeGroup">
+      <soap:operation soapAction="http://tempuri.org/GetUserMapAuthorizeGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotUserMapAuthorizeGroup">
+      <soap:operation soapAction="http://tempuri.org/GetNotUserMapAuthorizeGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserAll2">
+      <soap:operation soapAction="http://tempuri.org/LoadUserAll2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadGroupPermissionAll">
+      <soap:operation soapAction="http://tempuri.org/LoadGroupPermissionAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAuthorizeGroup">
+      <soap:operation soapAction="http://tempuri.org/SaveAuthorizeGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveGroup">
+      <soap:operation soapAction="http://tempuri.org/SaveGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveGroupUser">
+      <soap:operation soapAction="http://tempuri.org/SaveGroupUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGroup">
+      <soap:operation soapAction="http://tempuri.org/DeleteGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGroupUser">
+      <soap:operation soapAction="http://tempuri.org/DeleteGroupUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAuthorizeGroup">
+      <soap:operation soapAction="http://tempuri.org/LoadAuthorizeGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizeGroupMap">
+      <soap:operation soapAction="http://tempuri.org/GetAuthorizeGroupMap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceSoap12" type="tns:WebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CheckAuthorizeGroupScreenByUser">
+      <soap12:operation soapAction="http://tempuri.org/CheckAuthorizeGroupScreenByUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAuthorizeGroupMap">
+      <soap12:operation soapAction="http://tempuri.org/LoadAuthorizeGroupMap" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserByDepartment">
+      <soap12:operation soapAction="http://tempuri.org/LoadUserByDepartment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserDeaprtByName">
+      <soap12:operation soapAction="http://tempuri.org/LoadUserDeaprtByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadMapGridDesktopAll">
+      <soap12:operation soapAction="http://tempuri.org/LoadMapGridDesktopAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageFloorPlan">
+      <soap12:operation soapAction="http://tempuri.org/GetImageFloorPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFloorPlanByFloorAndRoom">
+      <soap12:operation soapAction="http://tempuri.org/LoadFloorPlanByFloorAndRoom" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadGridLayoutActive">
+      <soap12:operation soapAction="http://tempuri.org/LoadGridLayoutActive" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoomDetailById">
+      <soap12:operation soapAction="http://tempuri.org/GetRoomDetailById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCurrentInRoom">
+      <soap12:operation soapAction="http://tempuri.org/SaveCurrentInRoom" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadOfficerRoomByRoomId">
+      <soap12:operation soapAction="http://tempuri.org/LoadOfficerRoomByRoomId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFloorPlanByRoomId">
+      <soap12:operation soapAction="http://tempuri.org/LoadFloorPlanByRoomId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadOfficerMapLayoutByLayoutId">
+      <soap12:operation soapAction="http://tempuri.org/LoadOfficerMapLayoutByLayoutId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveMapGrid">
+      <soap12:operation soapAction="http://tempuri.org/SaveMapGrid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSpeedWayReadAreaAll">
+      <soap12:operation soapAction="http://tempuri.org/LoadSpeedWayReadAreaAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSpeedWayByRoomId">
+      <soap12:operation soapAction="http://tempuri.org/LoadSpeedWayByRoomId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAntennaBySpeedway">
+      <soap12:operation soapAction="http://tempuri.org/LoadAntennaBySpeedway" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAttenaMapLayoutByPort">
+      <soap12:operation soapAction="http://tempuri.org/LoadAttenaMapLayoutByPort" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAntennaPlanByRoomId">
+      <soap12:operation soapAction="http://tempuri.org/LoadAntennaPlanByRoomId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveMapAntenna">
+      <soap12:operation soapAction="http://tempuri.org/SaveMapAntenna" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSysConfig">
+      <soap12:operation soapAction="http://tempuri.org/LoadSysConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSysconfig">
+      <soap12:operation soapAction="http://tempuri.org/SaveSysconfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadDesktopAll">
+      <soap12:operation soapAction="http://tempuri.org/LoadDesktopAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDesktopById">
+      <soap12:operation soapAction="http://tempuri.org/GetDesktopById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDesktop">
+      <soap12:operation soapAction="http://tempuri.org/SaveDesktop" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDesktop">
+      <soap12:operation soapAction="http://tempuri.org/DeleteDesktop" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadDepartment">
+      <soap12:operation soapAction="http://tempuri.org/LoadDepartment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadDepartmentByUser">
+      <soap12:operation soapAction="http://tempuri.org/LoadDepartmentByUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSinageScheduleAll">
+      <soap12:operation soapAction="http://tempuri.org/LoadSinageScheduleAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSinageScheduleID">
+      <soap12:operation soapAction="http://tempuri.org/LoadSinageScheduleID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadMonthByDigitalSinageTemplateSchedule">
+      <soap12:operation soapAction="http://tempuri.org/LoadMonthByDigitalSinageTemplateSchedule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadDayByDigitalSinageTemplateSchedule">
+      <soap12:operation soapAction="http://tempuri.org/LoadDayByDigitalSinageTemplateSchedule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSinageScheduleDailyByTemplateID">
+      <soap12:operation soapAction="http://tempuri.org/LoadSinageScheduleDailyByTemplateID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSinageScheduleWeeklyByTemplateID">
+      <soap12:operation soapAction="http://tempuri.org/LoadSinageScheduleWeeklyByTemplateID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSinageScheduleTimeByTemplateID">
+      <soap12:operation soapAction="http://tempuri.org/LoadSinageScheduleTimeByTemplateID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSinageSchedule">
+      <soap12:operation soapAction="http://tempuri.org/SaveSinageSchedule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSinageSchedule">
+      <soap12:operation soapAction="http://tempuri.org/DeleteSinageSchedule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFloorAll">
+      <soap12:operation soapAction="http://tempuri.org/LoadFloorAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFloorByFloorPlan">
+      <soap12:operation soapAction="http://tempuri.org/LoadFloorByFloorPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFloorByDesktop">
+      <soap12:operation soapAction="http://tempuri.org/LoadFloorByDesktop" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFloorBySpeedway">
+      <soap12:operation soapAction="http://tempuri.org/LoadFloorBySpeedway" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFloorByLEDTV">
+      <soap12:operation soapAction="http://tempuri.org/LoadFloorByLEDTV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFloorPlanAll">
+      <soap12:operation soapAction="http://tempuri.org/LoadFloorPlanAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFloorPlanById">
+      <soap12:operation soapAction="http://tempuri.org/GetFloorPlanById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveFloorPlan">
+      <soap12:operation soapAction="http://tempuri.org/SaveFloorPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFloorPlan">
+      <soap12:operation soapAction="http://tempuri.org/DeleteFloorPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadGridLayoutAll">
+      <soap12:operation soapAction="http://tempuri.org/LoadGridLayoutAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGridLayoutById">
+      <soap12:operation soapAction="http://tempuri.org/GetGridLayoutById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveGridLayout">
+      <soap12:operation soapAction="http://tempuri.org/SaveGridLayout" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGridLayout">
+      <soap12:operation soapAction="http://tempuri.org/DeleteGridLayout" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadLEDTVAll">
+      <soap12:operation soapAction="http://tempuri.org/LoadLEDTVAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadLEDTVID">
+      <soap12:operation soapAction="http://tempuri.org/LoadLEDTVID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveLEDTV">
+      <soap12:operation soapAction="http://tempuri.org/SaveLEDTV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLEDTV">
+      <soap12:operation soapAction="http://tempuri.org/DeleteLEDTV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadLEDTVBySinageSchedule">
+      <soap12:operation soapAction="http://tempuri.org/LoadLEDTVBySinageSchedule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadLEDTVIDBySinageContent">
+      <soap12:operation soapAction="http://tempuri.org/LoadLEDTVIDBySinageContent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadObjectveBySpeedway">
+      <soap12:operation soapAction="http://tempuri.org/LoadObjectveBySpeedway" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPatentTypeAll">
+      <soap12:operation soapAction="http://tempuri.org/LoadPatentTypeAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatentTypeById">
+      <soap12:operation soapAction="http://tempuri.org/GetPatentTypeById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePatentType">
+      <soap12:operation soapAction="http://tempuri.org/SavePatentType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePatentType">
+      <soap12:operation soapAction="http://tempuri.org/DeletePatentType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPosition">
+      <soap12:operation soapAction="http://tempuri.org/LoadPosition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPositionByUser">
+      <soap12:operation soapAction="http://tempuri.org/LoadPositionByUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTitleAll">
+      <soap12:operation soapAction="http://tempuri.org/LoadTitleAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTitleByUser">
+      <soap12:operation soapAction="http://tempuri.org/LoadTitleByUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadRoomAll">
+      <soap12:operation soapAction="http://tempuri.org/LoadRoomAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadRoomByFloorPlan">
+      <soap12:operation soapAction="http://tempuri.org/LoadRoomByFloorPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadRoomByDesktop">
+      <soap12:operation soapAction="http://tempuri.org/LoadRoomByDesktop" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadRoomByFloor">
+      <soap12:operation soapAction="http://tempuri.org/LoadRoomByFloor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadRoomBySpeedway">
+      <soap12:operation soapAction="http://tempuri.org/LoadRoomBySpeedway" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserAll">
+      <soap12:operation soapAction="http://tempuri.org/LoadUserAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserByName">
+      <soap12:operation soapAction="http://tempuri.org/LoadUserByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <soap12:operation soapAction="http://tempuri.org/GetUserById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUser">
+      <soap12:operation soapAction="http://tempuri.org/SaveUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap12:operation soapAction="http://tempuri.org/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSignageContentByLEDTV">
+      <soap12:operation soapAction="http://tempuri.org/LoadSignageContentByLEDTV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSignageContentBySignageSchedule">
+      <soap12:operation soapAction="http://tempuri.org/LoadSignageContentBySignageSchedule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSpeedwayAll">
+      <soap12:operation soapAction="http://tempuri.org/LoadSpeedwayAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSpeedwayByID">
+      <soap12:operation soapAction="http://tempuri.org/LoadSpeedwayByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSpeedway">
+      <soap12:operation soapAction="http://tempuri.org/SaveSpeedway" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpeedwayDefaultMaxGPI">
+      <soap12:operation soapAction="http://tempuri.org/GetSpeedwayDefaultMaxGPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpeedwayDefaultMaxAnt">
+      <soap12:operation soapAction="http://tempuri.org/GetSpeedwayDefaultMaxAnt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSpeedway">
+      <soap12:operation soapAction="http://tempuri.org/DeleteSpeedway" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSearchMode">
+      <soap12:operation soapAction="http://tempuri.org/LoadSearchMode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFilterMode">
+      <soap12:operation soapAction="http://tempuri.org/LoadFilterMode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadReportMode">
+      <soap12:operation soapAction="http://tempuri.org/LoadReportMode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAutoStartMode">
+      <soap12:operation soapAction="http://tempuri.org/LoadAutoStartMode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadGPILevel">
+      <soap12:operation soapAction="http://tempuri.org/LoadGPILevel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAutoStopMode">
+      <soap12:operation soapAction="http://tempuri.org/LoadAutoStopMode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadMemoryBank">
+      <soap12:operation soapAction="http://tempuri.org/LoadMemoryBank" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFilterOp">
+      <soap12:operation soapAction="http://tempuri.org/LoadFilterOp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSpeedwayAntenna">
+      <soap12:operation soapAction="http://tempuri.org/LoadSpeedwayAntenna" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSpeedwayGPI">
+      <soap12:operation soapAction="http://tempuri.org/LoadSpeedwayGPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSpeedwayTagFilter">
+      <soap12:operation soapAction="http://tempuri.org/LoadSpeedwayTagFilter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserMapAuthorizeGroup">
+      <soap12:operation soapAction="http://tempuri.org/GetUserMapAuthorizeGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotUserMapAuthorizeGroup">
+      <soap12:operation soapAction="http://tempuri.org/GetNotUserMapAuthorizeGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserAll2">
+      <soap12:operation soapAction="http://tempuri.org/LoadUserAll2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadGroupPermissionAll">
+      <soap12:operation soapAction="http://tempuri.org/LoadGroupPermissionAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAuthorizeGroup">
+      <soap12:operation soapAction="http://tempuri.org/SaveAuthorizeGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveGroup">
+      <soap12:operation soapAction="http://tempuri.org/SaveGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveGroupUser">
+      <soap12:operation soapAction="http://tempuri.org/SaveGroupUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGroup">
+      <soap12:operation soapAction="http://tempuri.org/DeleteGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGroupUser">
+      <soap12:operation soapAction="http://tempuri.org/DeleteGroupUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAuthorizeGroup">
+      <soap12:operation soapAction="http://tempuri.org/LoadAuthorizeGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizeGroupMap">
+      <soap12:operation soapAction="http://tempuri.org/GetAuthorizeGroupMap" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService">
+    <wsdl:port name="WebServiceSoap" binding="tns:WebServiceSoap">
+      <soap:address location="http://192.168.1.101/dipuhf3/WebService/WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceSoap12" binding="tns:WebServiceSoap12">
+      <soap12:address location="http://192.168.1.101/dipuhf3/WebService/WebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

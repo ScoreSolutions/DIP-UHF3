@@ -1,0 +1,245 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/ContentMasterPage.master" AutoEventWireup="false" CodeFile="frmSearchFilePositonByFile.aspx.vb" Inherits="frmSearchFilePositonByFile" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+
+    <div class="main-content">
+        <div class="breadcrumbs" id="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    <i class="icon-home home-icon"></i>
+                    <a href="frmPortal.aspx">Home</a>
+
+                    <span class="divider">
+                        <i class="icon-angle-right arrow-icon"></i>
+                    </span>
+                </li>
+                <li class="active">ตำแหน่งแฟ้มพร้อมรายชื่อผู้ครอบครองแฟ้ม</li>
+            </ul>
+            <!--.breadcrumb-->
+
+            <%--            <div class="nav-search" id="nav-search">
+                <form class="form-search" />
+                <span class="input-icon">
+                    <input type="text" placeholder="Search ..." class="input-small nav-search-input" id="nav-search-input" autocomplete="off" />
+                    <i class="icon-search nav-search-icon"></i>
+                </span>
+                </form>
+            </div>--%>
+            <!--#nav-search-->
+        </div>
+
+        <div class="page-content">
+            <div class="row-fluid">
+                <div class="span12">
+                    <!--PAGE CONTENT BEGINS-->
+                    <h3 class="header smaller lighter blue">ตำแหน่งแฟ้มพร้อมรายชื่อผู้ครอบครองแฟ้ม</h3>
+                    <div class="row-fluid">
+                        <div class="span2">
+                            <label class="control-label" for="lblAtendent">เลขที่คำขอ :</label>
+
+                        </div>
+                        <div class="span10">
+                            <input type="text" class="input-medium search-query" id="txtApp_No" onkeypress="return Numbers(event);" maxlength="10" />
+                             <span class="color red" id="lblvalidtxtApp_no" style="display: none">กรุณาระบุเลขที่คำขอ</span>
+                            <button id="btnSearch" class="btn btn-primary btn-small">
+                                ค้นหา <i class="icon-search icon-on-left bigger-110"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="space-2"></div>
+                    <div class="row-fluid" id="divNotFound" style="display: none">
+                        <div class="span2">
+                        </div>
+                        <div class="span10">
+                            <strong class="color red">ไม่พบข้อมูล</strong>
+                            <%--         <label class="control-label " for="lblNotFound"></label>--%>
+                        </div>
+                    </div>
+                    <div class="hr hr10" id="divFoundLine" style="display: none"></div>
+                    <div class="row-fluid" id="divFound" style="display: none">
+
+                        <div class="span2">
+                            <label class="control-label" >วันที่เคลื่อนไหวล่าสุด :</label>
+                            <label class="control-label  color blue" id="lblDateTime"></label>
+                        </div>
+                        <div class="span2">
+                            <label class="control-label" >เลขที่คำขอ :</label>
+                            <label class="control-label  color blue" id="lblAppNo"></label>
+
+                        </div>
+                        <div class="span2">
+                            <label class="control-label" >ผู้ยืม :</label>
+                            <label class="control-label  color blue" id="lblBorrowName"></label>
+
+                        </div>
+                         <div class="span2">
+                            <label class="control-label" >วันที่ยืม :</label>
+                            <label class="control-label  color blue" id="lblBorrowDate"></label>
+
+                        </div>
+                        <div class="span4">
+                            <label class="control-label" >ตำแหน่งแฟ้ม :</label>
+                            <label class="control-label  color blue" id="lblLocation"></label>
+
+                        </div>
+
+                    </div>
+                    <div class="hr hr10" id="divFoundPositionLine" style="display: none"></div>
+                    <div class="row-fluid" id="divFoundPosition" style="display: none">
+                                         <div class="span2">
+                        <label class="control-label  color blue" id="lblposition">ระบุที่อยู่ตำแห่งแฟ้ม</label>
+                    </div>
+                    <div class="span2">
+           <%--             <div class="controls">
+                            <label class="inline">
+                                <input name="ckbActive" type="checkbox" id="ckbActive" />
+                                <span class="lbl color blue">&nbsp;show grid;</span>
+                            </label>
+                  
+                        </div>--%>
+                    </div>
+
+
+                        <div id="divGridShow"></div>
+                    </div>
+      
+                                     
+                </div>
+
+            </div>
+            <!--/.span-->
+        </div>
+
+
+    </div>
+
+    <script type="text/javascript">
+        //Open page
+        $(document).ready(function () {
+            //Load data
+            var oTable;
+            $("#btnSearch").click(function () {
+                //alert("Search Click");
+                var checkvalid = onValid();
+                if (checkvalid == true) {
+                    //alert("0302020302");
+                   LoadData();
+                }
+            });
+
+            $("#btnClear").click(function () {
+
+            });
+
+        });
+
+
+
+        //Call
+
+
+        function LoadData() {
+            var app_no = $("#txtApp_No").val();
+
+            var login_username = $('#' + '<%=Master.FindControl("lblUserName").ClientID%>').text();
+            var param = "{'app_no':" + JSON.stringify(app_no)
+                        + ",'login_username':" + JSON.stringify(login_username)
+                        + "}";
+            $.ajax({
+                type: "POST",
+                url: "WebService/WebService.asmx/LoadFloorPlanByApp_No",
+                data: param,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    var jsonobject = JSON.parse(data.d);
+
+                    if (jsonobject.length > 0) {
+
+                        $("#lblDateTime").text(jsonobject[0].strmove_date);
+                        $("#lblAppNo").text(jsonobject[0].app_no);
+                        $("#lblBorrowName").text(jsonobject[0].borrowname);
+                        $("#lblBorrowDate").text(jsonobject[0].borrowerdate);
+                        $("#lblLocation").text(jsonobject[0].location_name);
+                        $("#divGridShow").html(jsonobject[0].showdata);
+                        $('#' + jsonobject[0].showfound).blink();
+
+                        $("#divFoundLine").show();
+                        $("#divFound").show();
+                        $("#divFoundPositionLine").show();
+                        $("#divFoundPosition").show();
+                        $("#divNotFound").hide();
+
+                        //$.each(jsonobject, function (key, val) {
+                        //$("#lblDateTime").text(val.strmove_date);
+                        //$("#lblAppNo").text(val.app_no);
+                        //$("#lblBorrowName").text(val.officer_name);
+                        //$("#lblLocation").text(val.location_name);
+                        //$("#divGridShow").html(val.showdata);
+                        //$('#' + val.showfound).blink();
+                        // })
+                    } else {
+                        $("#divFoundLine").hide();
+                        $("#divFound").hide();
+                        $("#divFoundPositionLine").hide();
+                        $("#divFoundPosition").hide();
+                        $("#divNotFound").show();
+                    }              
+                    
+                },
+                error: function (xhr, status, error) {
+                    alert(xhr.responseText);
+                }
+            });
+
+        }
+
+
+        //Hide Valid
+        function onValidHide() {
+            $("#lblvalidtxtApp_no").hide();
+        }
+        //Check Valid
+        function onValid() {
+            var isValid;
+            isValid = true;
+            var app_no = $('#txtApp_No').val();
+            if (app_no == '') {
+                $("#lblvalidtxtApp_no").show();
+                isValid = false;
+            } else {
+                $("#lblvalidtxtApp_no").hide();
+            }
+
+            return isValid;
+        }
+
+        //clear control
+        function clearinput() {
+            $("#txtApp_No").val("");
+        }
+
+        function Numbers(e) {
+            var keynum;
+            var keychar;
+            var numcheck;
+            if (window.event) {// IE
+                keynum = e.keyCode;
+            }
+            else if (e.which) {// Netscape/Firefox/Opera
+                keynum = e.which;
+            }
+            if (keynum == 13 || keynum == 8 || typeof (keynum) == "undefined") {
+                return true;
+            }
+            keychar = String.fromCharCode(keynum);
+            numcheck = /^[0-9]$/;
+            return numcheck.test(keychar);
+        }
+
+    </script>
+</asp:Content>
+
+
+

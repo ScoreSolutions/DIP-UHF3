@@ -1,0 +1,35 @@
+/*
+Stylesheet for the Javascript jscAutoComplete control
+AdvanceByDesign.com
+
+Copyright (C) 2011 Robert Rook
+Released under the terms of the
+ABD Free Source Code Licence
+*/
+#auto_list {
+	display:block;
+	padding:2px;
+	width:150px;
+	border:1px solid;
+	z-index:999;
+	position:absolute;
+	overflow:hidden;
+	left:0;
+	top:0;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+}
+#auto_list a,#auto_list a:link,#auto_list a:visited {
+	display:block;
+	padding:2px;
+	clear:both;
+	background:#FFF;
+	text-decoration:none;
+	color:#000;
+}
+#auto_list a:hover,#auto_list a:active,#auto_list a:focus {
+	background:#FDD;
+}
+.ac_match {
+	font-weight:bold; color:#C00;
+}

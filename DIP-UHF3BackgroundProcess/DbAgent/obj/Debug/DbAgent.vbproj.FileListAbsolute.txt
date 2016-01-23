@@ -1,0 +1,10 @@
+D:\MyProject\DIP-UHF3\DIP-UHF3BackgroundProcess\DbAgent\bin\Debug\DbAgent.exe
+D:\MyProject\DIP-UHF3\DIP-UHF3BackgroundProcess\DbAgent\bin\Debug\DbAgent.pdb
+D:\MyProject\DIP-UHF3\DIP-UHF3BackgroundProcess\DbAgent\bin\Debug\DbAgent.xml
+D:\MyProject\DIP-UHF3\DIP-UHF3BackgroundProcess\DbAgent\obj\Debug\DbAgent.frmDBA.resources
+D:\MyProject\DIP-UHF3\DIP-UHF3BackgroundProcess\DbAgent\obj\Debug\DbAgent.frmMain.resources
+D:\MyProject\DIP-UHF3\DIP-UHF3BackgroundProcess\DbAgent\obj\Debug\DbAgent.Resources.resources
+D:\MyProject\DIP-UHF3\DIP-UHF3BackgroundProcess\DbAgent\obj\Debug\DbAgent.vbproj.GenerateResource.Cache
+D:\MyProject\DIP-UHF3\DIP-UHF3BackgroundProcess\DbAgent\obj\Debug\DbAgent.exe
+D:\MyProject\DIP-UHF3\DIP-UHF3BackgroundProcess\DbAgent\obj\Debug\DbAgent.xml
+D:\MyProject\DIP-UHF3\DIP-UHF3BackgroundProcess\DbAgent\obj\Debug\DbAgent.pdb

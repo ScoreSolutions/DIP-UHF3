@@ -1,0 +1,8 @@
+D:\MyProject\DIP-UHF3\ShareObject\trunk\LinqDB\bin\Release\LinqDB.dll
+D:\MyProject\DIP-UHF3\ShareObject\trunk\LinqDB\bin\Release\LinqDB.pdb
+D:\MyProject\DIP-UHF3\ShareObject\trunk\LinqDB\bin\Release\LinqDB.xml
+D:\MyProject\DIP-UHF3\ShareObject\trunk\LinqDB\obj\Release\LinqDB.Resources.resources
+D:\MyProject\DIP-UHF3\ShareObject\trunk\LinqDB\obj\Release\LinqDB.vbproj.GenerateResource.Cache
+D:\MyProject\DIP-UHF3\ShareObject\trunk\LinqDB\obj\Release\LinqDB.dll
+D:\MyProject\DIP-UHF3\ShareObject\trunk\LinqDB\obj\Release\LinqDB.xml
+D:\MyProject\DIP-UHF3\ShareObject\trunk\LinqDB\obj\Release\LinqDB.pdb
