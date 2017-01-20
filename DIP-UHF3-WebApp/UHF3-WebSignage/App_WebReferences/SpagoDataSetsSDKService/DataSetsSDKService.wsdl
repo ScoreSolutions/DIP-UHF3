@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:intf="urn:spagobisdkdatasets" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns1="http://bo.datasets.sdk.spagobi.eng.it" xmlns:tns2="http://exceptions.sdk.spagobi.eng.it" xmlns:impl="urn:spagobisdkdatasets" targetNamespace="urn:spagobisdkdatasets" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:spagobisdkdatasets">
+      <xsd:import namespace="http://xml.apache.org/xml-soap" />
+      <xsd:import namespace="http://exceptions.sdk.spagobi.eng.it" />
+      <xsd:import namespace="http://bo.datasets.sdk.spagobi.eng.it" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="ArrayOf_soapenc_string">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="xsd:string[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns2_SDKDataSetParameter">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:SDKDataSetParameter[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns2_SDKDataSet">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:SDKDataSet[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns2_SDKDataStoreFieldMetadata">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:SDKDataStoreFieldMetadata[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://bo.datasets.sdk.spagobi.eng.it">
+      <xsd:import namespace="http://xml.apache.org/xml-soap" />
+      <xsd:import namespace="http://exceptions.sdk.spagobi.eng.it" />
+      <xsd:import namespace="urn:spagobisdkdatasets" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="SDKDataSetParameter">
+        <xsd:sequence>
+          <xsd:element name="name" nillable="true" type="soapenc:string" />
+          <xsd:element name="type" nillable="true" type="soapenc:string" />
+          <xsd:element name="values" nillable="true" type="impl:ArrayOf_soapenc_string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SDKDataSet">
+        <xsd:sequence>
+          <xsd:element name="description" nillable="true" type="soapenc:string" />
+          <xsd:element name="active" nillable="true" type="soapenc:boolean" />
+          <xsd:element name="_public" nillable="true" type="soapenc:boolean" />
+          <xsd:element name="label" nillable="true" type="soapenc:string" />
+          <xsd:element name="name" nillable="true" type="soapenc:string" />
+          <xsd:element name="numberingRows" nillable="true" type="soapenc:boolean" />
+          <xsd:element name="parameters" nillable="true" type="impl:ArrayOf_tns2_SDKDataSetParameter" />
+          <xsd:element name="pivotColumnName" nillable="true" type="soapenc:string" />
+          <xsd:element name="pivotColumnValue" nillable="true" type="soapenc:string" />
+          <xsd:element name="pivotRowName" nillable="true" type="soapenc:string" />
+          <xsd:element name="configuration" nillable="true" type="soapenc:string" />
+          <xsd:element name="organization" nillable="true" type="soapenc:string" />
+          <xsd:element name="transformer" nillable="true" type="soapenc:string" />
+          <xsd:element name="category" nillable="true" type="soapenc:string" />
+          <xsd:element name="id" nillable="true" type="xsd:int" />
+          <xsd:element name="type" nillable="true" type="xsd:string" />
+          <xsd:element name="versionNum" nillable="true" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SDKDataStoreFieldMetadata">
+        <xsd:sequence>
+          <xsd:element name="className" nillable="true" type="soapenc:string" />
+          <xsd:element name="name" nillable="true" type="soapenc:string" />
+          <xsd:element name="properties" nillable="true" type="apachesoap:Map" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SDKDataStoreMetadata">
+        <xsd:sequence>
+          <xsd:element name="fieldsMetadata" nillable="true" type="impl:ArrayOf_tns2_SDKDataStoreFieldMetadata" />
+          <xsd:element name="properties" nillable="true" type="apachesoap:Map" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://exceptions.sdk.spagobi.eng.it">
+      <xsd:import namespace="http://xml.apache.org/xml-soap" />
+      <xsd:import namespace="urn:spagobisdkdatasets" />
+      <xsd:import namespace="http://bo.datasets.sdk.spagobi.eng.it" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="NotAllowedOperationException">
+        <xsd:sequence />
+      </xsd:complexType>
+      <xsd:complexType name="InvalidParameterValue">
+        <xsd:sequence>
+          <xsd:element name="parameterFormat" nillable="true" type="soapenc:string" />
+          <xsd:element name="parameterName" nillable="true" type="soapenc:string" />
+          <xsd:element name="parameterType" nillable="true" type="soapenc:string" />
+          <xsd:element name="wrongParameterValue" nillable="true" type="soapenc:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="MissingParameterValue">
+        <xsd:sequence>
+          <xsd:element name="parameterName" nillable="true" type="soapenc:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.apache.org/xml-soap">
+      <xsd:import namespace="http://exceptions.sdk.spagobi.eng.it" />
+      <xsd:import namespace="urn:spagobisdkdatasets" />
+      <xsd:import namespace="http://bo.datasets.sdk.spagobi.eng.it" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="mapItem">
+        <xsd:sequence>
+          <xsd:element name="key" nillable="true" type="xsd:anyType" />
+          <xsd:element name="value" nillable="true" type="xsd:anyType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Map">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="apachesoap:mapItem" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="InvalidParameterValue">
+    <wsdl:part name="fault" type="tns2:InvalidParameterValue" />
+  </wsdl:message>
+  <wsdl:message name="getDataSetRequest">
+    <wsdl:part name="in0" type="soapenc:int" />
+  </wsdl:message>
+  <wsdl:message name="getDataStoreMetadataResponse">
+    <wsdl:part name="getDataStoreMetadataReturn" type="tns1:SDKDataStoreMetadata" />
+  </wsdl:message>
+  <wsdl:message name="getDataStoreMetadataRequest">
+    <wsdl:part name="in0" type="tns1:SDKDataSet" />
+  </wsdl:message>
+  <wsdl:message name="saveDatasetResponse">
+    <wsdl:part name="saveDatasetReturn" type="soapenc:int" />
+  </wsdl:message>
+  <wsdl:message name="saveDatasetRequest">
+    <wsdl:part name="in0" type="tns1:SDKDataSet" />
+  </wsdl:message>
+  <wsdl:message name="executeDataSetRequest">
+    <wsdl:part name="in0" type="soapenc:string" />
+    <wsdl:part name="in1" type="impl:ArrayOf_tns2_SDKDataSetParameter" />
+  </wsdl:message>
+  <wsdl:message name="MissingParameterValue">
+    <wsdl:part name="fault" type="tns2:MissingParameterValue" />
+  </wsdl:message>
+  <wsdl:message name="getDataSetsResponse">
+    <wsdl:part name="getDataSetsReturn" type="impl:ArrayOf_tns2_SDKDataSet" />
+  </wsdl:message>
+  <wsdl:message name="getDataSetResponse">
+    <wsdl:part name="getDataSetReturn" type="tns1:SDKDataSet" />
+  </wsdl:message>
+  <wsdl:message name="executeDataSetResponse">
+    <wsdl:part name="executeDataSetReturn" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="getDataSetsRequest" />
+  <wsdl:message name="NotAllowedOperationException">
+    <wsdl:part name="fault" type="tns2:NotAllowedOperationException" />
+  </wsdl:message>
+  <wsdl:portType name="DataSetsSDKService">
+    <wsdl:operation name="getDataSets">
+      <wsdl:input name="getDataSetsRequest" message="impl:getDataSetsRequest" />
+      <wsdl:output name="getDataSetsResponse" message="impl:getDataSetsResponse" />
+      <wsdl:fault name="NotAllowedOperationException" message="impl:NotAllowedOperationException" />
+    </wsdl:operation>
+    <wsdl:operation name="getDataSet" parameterOrder="in0">
+      <wsdl:input name="getDataSetRequest" message="impl:getDataSetRequest" />
+      <wsdl:output name="getDataSetResponse" message="impl:getDataSetResponse" />
+      <wsdl:fault name="NotAllowedOperationException" message="impl:NotAllowedOperationException" />
+    </wsdl:operation>
+    <wsdl:operation name="getDataStoreMetadata" parameterOrder="in0">
+      <wsdl:input name="getDataStoreMetadataRequest" message="impl:getDataStoreMetadataRequest" />
+      <wsdl:output name="getDataStoreMetadataResponse" message="impl:getDataStoreMetadataResponse" />
+      <wsdl:fault name="InvalidParameterValue" message="impl:InvalidParameterValue" />
+      <wsdl:fault name="MissingParameterValue" message="impl:MissingParameterValue" />
+      <wsdl:fault name="NotAllowedOperationException" message="impl:NotAllowedOperationException" />
+    </wsdl:operation>
+    <wsdl:operation name="saveDataset" parameterOrder="in0">
+      <wsdl:input name="saveDatasetRequest" message="impl:saveDatasetRequest" />
+      <wsdl:output name="saveDatasetResponse" message="impl:saveDatasetResponse" />
+      <wsdl:fault name="NotAllowedOperationException" message="impl:NotAllowedOperationException" />
+    </wsdl:operation>
+    <wsdl:operation name="executeDataSet" parameterOrder="in0 in1">
+      <wsdl:input name="executeDataSetRequest" message="impl:executeDataSetRequest" />
+      <wsdl:output name="executeDataSetResponse" message="impl:executeDataSetResponse" />
+      <wsdl:fault name="NotAllowedOperationException" message="impl:NotAllowedOperationException" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DataSetsSDKServiceSoapBinding" type="impl:DataSetsSDKService">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="getDataSets">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getDataSetsRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:spagobisdkdatasets" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getDataSetsResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:spagobisdkdatasets" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="NotAllowedOperationException">
+        <wsdlsoap:fault use="encoded" name="NotAllowedOperationException" namespace="urn:spagobisdkdatasets" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getDataSet">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getDataSetRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:spagobisdkdatasets" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getDataSetResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:spagobisdkdatasets" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="NotAllowedOperationException">
+        <wsdlsoap:fault use="encoded" name="NotAllowedOperationException" namespace="urn:spagobisdkdatasets" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getDataStoreMetadata">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getDataStoreMetadataRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:spagobisdkdatasets" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getDataStoreMetadataResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:spagobisdkdatasets" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="InvalidParameterValue">
+        <wsdlsoap:fault use="encoded" name="InvalidParameterValue" namespace="urn:spagobisdkdatasets" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="MissingParameterValue">
+        <wsdlsoap:fault use="encoded" name="MissingParameterValue" namespace="urn:spagobisdkdatasets" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+      <wsdl:fault name="NotAllowedOperationException">
+        <wsdlsoap:fault use="encoded" name="NotAllowedOperationException" namespace="urn:spagobisdkdatasets" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="saveDataset">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="saveDatasetRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:spagobisdkdatasets" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="saveDatasetResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:spagobisdkdatasets" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="NotAllowedOperationException">
+        <wsdlsoap:fault use="encoded" name="NotAllowedOperationException" namespace="urn:spagobisdkdatasets" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="executeDataSet">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="executeDataSetRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:spagobisdkdatasets" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="executeDataSetResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:spagobisdkdatasets" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="NotAllowedOperationException">
+        <wsdlsoap:fault use="encoded" name="NotAllowedOperationException" namespace="urn:spagobisdkdatasets" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DataSetsSDKServiceService">
+    <wsdl:port name="DataSetsSDKService" binding="impl:DataSetsSDKServiceSoapBinding">
+      <wsdlsoap:address location="http://192.168.1.202:8080/SpagoBI/sdk/DataSetsSDKService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

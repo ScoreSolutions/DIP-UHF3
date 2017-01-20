@@ -1,8 +1,0 @@
-D:\MyProject\DIP-UHF3\ShareObject\trunk\DIPUHF3DB\obj\Debug\DIPUHF3DB.Resources.resources
-D:\MyProject\DIP-UHF3\ShareObject\trunk\DIPUHF3DB\obj\Debug\DIPUHF3DB.vbproj.GenerateResource.Cache
-D:\MyProject\DIP-UHF3\ShareObject\trunk\DIPUHF3DB\bin\Debug\DIPUHF3DB.dll
-D:\MyProject\DIP-UHF3\ShareObject\trunk\DIPUHF3DB\bin\Debug\DIPUHF3DB.pdb
-D:\MyProject\DIP-UHF3\ShareObject\trunk\DIPUHF3DB\bin\Debug\DIPUHF3DB.xml
-D:\MyProject\DIP-UHF3\ShareObject\trunk\DIPUHF3DB\obj\Debug\DIPUHF3DB.dll
-D:\MyProject\DIP-UHF3\ShareObject\trunk\DIPUHF3DB\obj\Debug\DIPUHF3DB.xml
-D:\MyProject\DIP-UHF3\ShareObject\trunk\DIPUHF3DB\obj\Debug\DIPUHF3DB.pdb

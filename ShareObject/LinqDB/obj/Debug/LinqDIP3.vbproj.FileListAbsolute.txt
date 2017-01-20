@@ -1,8 +1,0 @@
-D:\MyProject\DIP-UHF3\ShareObject\trunk\LinqDIP3\obj\Debug\LinqDIP3.vbproj.GenerateResource.Cache
-D:\MyProject\DIP-UHF3\ShareObject\trunk\LinqDIP3\bin\Debug\LinqDIP3.dll
-D:\MyProject\DIP-UHF3\ShareObject\trunk\LinqDIP3\bin\Debug\LinqDIP3.pdb
-D:\MyProject\DIP-UHF3\ShareObject\trunk\LinqDIP3\bin\Debug\LinqDIP3.xml
-D:\MyProject\DIP-UHF3\ShareObject\trunk\LinqDIP3\obj\Debug\LinqDIP3.Resources.resources
-D:\MyProject\DIP-UHF3\ShareObject\trunk\LinqDIP3\obj\Debug\LinqDIP3.dll
-D:\MyProject\DIP-UHF3\ShareObject\trunk\LinqDIP3\obj\Debug\LinqDIP3.xml
-D:\MyProject\DIP-UHF3\ShareObject\trunk\LinqDIP3\obj\Debug\LinqDIP3.pdb

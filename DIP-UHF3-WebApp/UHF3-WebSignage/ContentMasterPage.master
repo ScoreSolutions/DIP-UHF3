@@ -1,0 +1,177 @@
+﻿<%@ Master Language="VB" CodeFile="ContentMasterPage.master.vb" Inherits="ContentMasterPage" %>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <meta name="description" content="overview &amp; stats" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--basic styles-->
+     
+    <link href="assets2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets2/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets2/css/font-awesome.min.css" />
+
+    <!--[if IE 7]>
+		  <link rel="stylesheet" href="assets2/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+    <!--page specific plugin styles-->
+
+    <!--fonts-->
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
+
+    <!--page specific plugin styles-->
+
+    <link rel="stylesheet" href="assets2/css/jquery-ui-1.10.3.custom.min.css" />
+    <link rel="stylesheet" href="assets2/css/chosen.css" />
+    <link rel="stylesheet" href="assets2/css/datepicker.css" />
+    <link rel="stylesheet" href="assets2/css/bootstrap-timepicker.css" />
+    <link rel="stylesheet" href="assets2/css/daterangepicker.css" />
+    <link rel="stylesheet" href="assets2/css/colorpicker.css" />
+    <link rel="stylesheet" href="assets2/css/jquery.gritter.css" />
+    <link rel="stylesheet" href="assets2/css/bootstrap-editable.css" />
+
+
+
+    <!--ace styles-->
+
+    <link rel="stylesheet" href="assets2/css/ace.min.css" />
+    <link rel="stylesheet" href="assets2/css/ace-responsive.min.css" />
+    <link rel="stylesheet" href="assets2/css/ace-skins.min.css" />
+
+
+<%--    <link href="assets2/alertify.js-0.3.11/themes/alertify.core.css" rel="stylesheet" />
+    <link href="assets2/alertify.js-0.3.11/themes/alertify.default.css" rel="stylesheet" id="toggleCSS" />
+
+    <script src="assets2/js/jquery-1.11.1.min.js"></script>
+    <script src="assets2/alertify.js-0.3.11/lib/alertify.min.js"></script>--%>
+
+
+    <!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets2/css/ace-ie.min.css" />
+		<![endif]-->
+
+    <!--inline styles related to this page-->
+
+
+    <!--basic scripts-->
+
+
+
+    <!--[if !IE]>-->
+
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='assets2/js/jquery-2.0.3.min.js'>" + "<" + "/script>");
+    </script>
+
+    <!--<![endif]-->
+
+    <!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets2/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+    <script type="text/javascript">
+        if ("ontouchend" in document) document.write("<script src='assets2/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+    </script>
+    <script src="assets2/js/bootstrap.min.js"></script>
+
+    <%--<script src="assets2/js/jquery-1.11.1.js"></script>--%>
+    <script src="assets2/js/jquery-ui-1.11.1.js"></script>
+    <link href="assets2/themes/start/jquery-ui.css" rel="stylesheet" />
+    <!--alertify scripts-->
+
+
+
+    <!--page specific plugin scripts-->
+
+    <!--[if lte IE 8]>
+		  <script src="assets2/js/excanvas.min.js"></script>
+		<![endif]-->
+    
+ 
+
+    <script src="assets2/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="assets2/js/jquery.ui.touch-punch.min.js"></script>
+    <script src="assets2/js/jquery.slimscroll.min.js"></script>
+    <script src="assets2/js/jquery.easy-pie-chart.min.js"></script>
+    <script src="assets2/js/jquery.sparkline.min.js"></script>
+    <script src="assets2/js/flot/jquery.flot.min.js"></script>
+    <script src="assets2/js/flot/jquery.flot.pie.min.js"></script>
+    <script src="assets2/js/flot/jquery.flot.resize.min.js"></script>
+    <script src="assets2/js/chosen.jquery.min.js"></script>
+    <script src="assets2/js/fuelux/fuelux.spinner.min.js"></script>
+    <script src="assets2/js/date-time/bootstrap-timepicker.min.js"></script>
+    <script src="assets2/js/date-time/bootstrap-datepicker.min.js"></script>
+    <script src="assets2/js/jquery.inputlimiter.1.3.1.min.js"></script>
+    <script src="assets2/js/chosen.jquery.min.js"></script>
+<%--   Browe File--%>
+    		<script src="assets2/js/bootstrap-wysiwyg.min.js"></script>
+
+  <script src="assets2/js/jquery.gritter.min.js"></script>
+   <script src="assets2/js/x-editable/bootstrap-editable.min.js"></script>
+   <script src="assets2/js/x-editable/ace-editable.min.js"></script>
+ 
+
+
+    <!--page specific plugin scripts-->
+
+    <script src="assets2/js/jquery.dataTables.min.js"></script>
+    <script src="assets2/js/jquery.dataTables.bootstrap.js"></script>
+
+    <!--ace scripts-->
+
+    <script src="assets2/js/ace-elements.min.js"></script>
+    <script src="assets2/js/ace.min.js"></script>
+
+      <!--blink-->
+   <script src="Demo/assets/js/jquery-blink/jquery-blink/jquery-blink.js"></script>
+
+    
+</head>
+
+<body>
+
+    <div id="dvLoading" style="display:none"></div>
+    <asp:Label ID="lblUserID" runat="server" style="display:none"></asp:Label>
+    <asp:Label ID="lblUserName" runat="server" style="display:none"></asp:Label>
+    <asp:Label ID="lblHostReport" runat="server" style="display:none"></asp:Label>
+
+
+    <div class="main-container container-fluid">
+        <a class="menu-toggler" id="menu-toggler" href="#">
+            <span class="menu-text"></span>
+        </a>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+
+        <!--/.main-content-->
+    </div>
+    <!--/.main-container-->
+
+    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-small btn-inverse">
+        <i class="icon-double-angle-up icon-only bigger-110"></i>
+    </a>
+    <link href="assets2/js/nprogress-master/nprogress.css" rel="stylesheet" />
+    <script src="assets2/js/nprogress-master/nprogress.js"></script>
+
+      <script type="text/javascript">
+          $(function () {
+
+              $(document).on('ajaxStart', function () { NProgress.start(); });
+              $(document).on('ajaxStop', function () { NProgress.done(); });
+          });
+    </script>
+
+</body>
+</html>
